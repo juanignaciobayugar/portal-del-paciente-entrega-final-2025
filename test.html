@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>LocalStorage JSON Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        pre {
+            padding: 15px;
+            background: #fff;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            max-width: 500px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Ejemplo: Guardar y recuperar JSON complejo en LocalStorage</h2>
+
+    <button onclick="guardar()">Guardar JSON</button>
+    <button onclick="cargar()">Cargar JSON</button>
+
+    <h3>Resultado:</h3>
+    <pre id="resultado"></pre>
+
+    <script>
+        // Estructura compleja
+        const data = {
+            usuario: {
+                nombre: "Toto",
+                edad: 30,
+                preferencias: {
+                    lenguajes: ["JavaScript", "PHP", "TypeScript"],
+                    darkMode: true
+                }
+            }
+        };
+
+        function guardar() {
+            // Convertimos a string para poder guardarlo
+            localStorage.setItem("miData", JSON.stringify(data));
+            document.getElementById("resultado").textContent =
+                "JSON guardado correctamente ✔️";
+        }
+
+        function cargar() {
+            // Recuperamos el string
+            const texto = localStorage.getItem("miData");
+
+            if (!texto) {
+                document.getElementById("resultado").textContent =
+                    "No hay datos guardados ❌";
+                return;
+            }
+
+            // Lo convertimos nuevamente a objeto
+            const obj = JSON.parse(texto);
+
+            // Mostramos el contenido formateado
+            document.getElementById("resultado").textContent =
+                JSON.stringify(obj, null, 4);
+        }
+    </script>
+
+</body>
+</html>
