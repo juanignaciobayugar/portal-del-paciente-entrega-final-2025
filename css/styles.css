@@ -1,0 +1,119 @@
+/* Reset simple: ayuda a las configuraciones generales de los navegadores: bordes y desbordes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    min-height: 100vh; /* asegura que ocupe toda la altura */
+}
+
+/* Layout central */
+.layout {
+  display: grid;
+min-height: 100vh; /* los socalos ocupan todo el alto */
+grid-template-columns: 1fr minmax(0, 1000px) 1fr; /* zócalo - central - zócalo */
+}
+/* Columna central */
+.central {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background:  white;
+  color: #32373C;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Menu */
+.menu {
+  background: #4D8991;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* no estira en el eje cruzado */
+  gap: 8px;           /* separación entre items, mejor que margin */
+  list-style: none;
+  margin:0;
+  padding: 0;
+  flex-wrap:wrap;
+}
+
+.menu li {
+    flex: 0 0 auto; 
+}
+
+.menu a {
+  font-family: 'Rubik', sans-serif;
+  color: #A8B8B8;
+  display: inline-block;   /* se ajusta al contenido */
+  padding: 10px 14px;      /* alto y ancho del “botón” */
+  white-space: normal;
+  word-break:break-word;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  max-width: 120px;        /* límite de ancho del botón */
+}
+
+.menu a:hover {
+  color: #EE8D62;
+  background: #1A7B91;
+  border-radius: 5px;
+}
+
+
+.socalo {
+  background: #EAEAEA;
+ }
+
+.contenido {
+  background: white;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  background: #32373C;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* Responsivo: en pantallas chicas, columna única */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;        /* solo una columna */
+    grid-auto-rows: auto;              /* apila todo vertical */
+  }
+  /* Los zócalos pasan a franjas horizontales (opcional) */
+  .socalo { height: 50px; }
+
+  /* Menú vertical y a ancho completo en móvil */
+  .menu ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+  .menu a {
+    display: block;                    /* ahora sí ocupa el ancho del menú */
+    text-align: center;
+    padding: 14px 18px;
+  }
+}
