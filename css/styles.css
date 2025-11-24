@@ -27,13 +27,27 @@ grid-template-columns: 1fr minmax(0, 1000px) 1fr; /* zócalo - central - zócalo
 header {
   background:  white;
   color: #32373C;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* todo alineado a la izquierda */
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
+  width: 40%;        /* ocupa aprox. entre 9% y 15% del header */
+  max-width: 300px;/* límite para pantallas grandes */
+  height: auto;      /* mantiene proporción */
+  margin-left: 10px; /* espacio de 10px desde el borde izquierdo */
+
+}
+
+.foto-principal {
+  display: block;       /* evita espacios extra */
+  margin: 0 auto;       /* centra horizontalmente */
+  max-width: 100%;      /* se adapta al ancho del contenedor */
+  height: auto;         /* mantiene proporción */
+  object-fit: cover;    /* recorta si sobra espacio */
 }
 
 /* Menu */
@@ -58,7 +72,7 @@ header {
 
 .menu a {
   font-family: 'Rubik', sans-serif;
-  color: #A8B8B8;
+  color: #ddf3f3;
   display: inline-block;   /* se ajusta al contenido */
   padding: 10px 14px;      /* alto y ancho del “botón” */
   white-space: normal;
