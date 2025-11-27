@@ -1,0 +1,128 @@
+/* Contenedor principal */
+.contact-container {
+  max-width: 950px;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+}
+
+/* Tarjetas */
+.card {
+  background: #fff;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Formulario */
+.form-container {
+  flex: 2;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #9AA0D3;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+.btn-enviar {
+  background: #3A4BA0;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.btn-enviar:hover {
+  background: #2a3980;
+}
+
+/* Redes y contacto */
+.redes-container {
+  flex: 1;
+}
+
+.redes-lista,
+.info-lista {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.redes-lista li,
+.info-lista li {
+  margin: 14px 0;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Mantener color institucional en el texto */
+.redes-lista a,
+.info-lista li {
+  color: #3A4BA0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Iconos: colores oficiales siempre */
+.redes-lista i,
+.info-lista i {
+  font-size: 22px;
+  flex-shrink: 0;
+  transition: transform 0.18s ease;
+}
+
+.fa-facebook { color: #1877F2; }
+.fa-instagram { color: #E1306C; }
+.fa-tiktok { color: #000000; }
+.fa-youtube { color: #FF0000; }
+.fa-whatsapp { color: #25D366; }
+.fa-envelope { color: #404155; }
+.fa-location-dot { color: #404155; }
+.fa-clock { color: #404155; }
+
+/* Hover iconos */
+.redes-lista a:hover i,
+.info-lista li:hover i {
+  transform: scale(1.15);
+}
+
+/* Mensaje de éxito */
+.mensaje-exito {
+  background: rgb(50, 160, 72);
+  padding: 12px;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}

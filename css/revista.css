@@ -1,0 +1,62 @@
+/* -----------------------------
+   ESTILOS GENERALES DE REVISTA
+------------------------------ */
+
+body {
+  font-family: Arial, sans-serif;
+  background: #E8ECFF;
+  margin: 0;
+  padding: 0;
+  color: #2A2A2A;
+}
+
+/* Contenedor centrado */
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 60px auto;
+  background: #FFFFFF;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Centrado de texto */
+.center {
+  text-align: center;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  background: #6A74F7;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin: 8px;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background: #525AD9;
+}
+
+/* Botón secundario */
+.secondary {
+  background: #F56C6C;
+}
+
+.secondary:hover {
+  background: #D95353;
+}
+
+/* Agrupación de botones */
+.acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
