@@ -15,7 +15,7 @@ body {
 .layout {
   display: grid;
 min-height: 100vh; /* los socalos ocupan todo el alto */
-grid-template-columns: 1fr minmax(0, 1300px) 1fr; /* zócalo - central - zócalo */
+grid-template-columns: 1fr minmax(0, 1240px) 1fr; /* zócalo - central - zócalo */
 }
 /* Columna central */
 .central {
@@ -32,6 +32,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-start; /* todo alineado a la izquierda */
+}
+
+
+.logo-footer{
+  width: 40%;        /* ocupa aprox. entre 9% y 15% del header */
+  max-width: 35px;/* límite para pantallas grandes */
+  height: auto;      /* mantiene proporción */
+  margin-left: 5px; /* espacio de 10px desde el borde izquierdo */
+
 }
 
 .logo {
