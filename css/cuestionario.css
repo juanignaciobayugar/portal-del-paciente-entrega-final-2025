@@ -1,62 +1,215 @@
 
 .card {
-min-width: 600px;
-max-width:40%;
-display: flex;
-flex-direction:column;
-overflow: hidden;
-border: 2px solid #0066cc; /*color del borde*/
-border-radius: 10px; /*bordes redondeados*/
-background-color: aquamarine; /*color de fondo*/
-padding: 10px;
-margin: 20px;
-box-shadow: 0 4px 10 px rgba (0,0,0,0.2); /*sombra*/
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 2px solid #0066cc;
+  /*color del borde*/
+  border-radius: 10px;
+  /*bordes redondeados*/
+  background-color: #D4DDE7;
+  /*color de fondo*/
+  padding: 10px;
+  margin: 20px;
+  box-shadow: 0 4px 10 px rgba (0, 0, 0, 0.2);
+  /*sombra*/
+  margin: 0 auto;
 }
 
-.titulo{
-    text-align:center; /* centrar texto*/
-    font-size:1.5rem; /* tamaño de la fuente*/
-    color:#333; /* color del texto*/
-    padding: 10px;
+.titulo {
+  text-align:start;
+  text-align:center;
+  /* centrar texto*/
+  font-size: 1.9rem;
+  /* tamaño de la fuente*/
+  color: #1E3754;
+  /* color del texto*/
+  padding: 10px;
 }
 
 .contenedor {
-    display:flex;
-}
+  display: flex;
 
+  max-width: auto;
+ 
+}
 
 .imagen {
-flex:2;
-height:100%;
-border-radius: 5 px;
+  max-width: 250px;
+  height: auto;
+  /* tamaño fijo o relativo */
+  border-radius: 100 px;
+  margin-top: 15px;
 }
 
+.imagen img {
+  max-width: 195px;
+  /* tamaño fijo o relativo */
+  height: auto;
+  /* mantiene proporción */
+    border-radius: 50%;   /* círculo perfecto */
+
+}
+
+.contienePregunta{
+  margin-top: 5px; 
+ max-width: 570px;
+}
 
 .botones {
-display:flex;
-flex-wrap: wrap; /* permite que los botones pasen a la siguiente linea*/
-justify-content: center; /*espacio entre los botones*/
-margin-top: 1%; /*margen superior*/
-align-items:baseline;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  /* permite que los botones pasen a la siguiente linea*/
+  gap: 11px;
+  justify-content: space-around;
+  /* reparte espacio */
+  max-width: 650px;
+  max-height: auto;
 }
 
 
-button {    
-    background-color: #2fb8bf; /*color de fondo*/
-    border: 1px solid #0f082b;
-    color:white; /* color del texto*/
-    border:none; /*sin borde*/
-    border-radius: 5px; /*bordes redondeados*/
-    padding: 8px;
-    cursor:ponter; /* cursor de mano al pasar por encima*/
-    font-size: 140%;
-    flex: 1 0 calc (40% - 20px);
-    margin: 2.9%;
-    padding: 3%/*largo*/ 4%/*ancho*/;
+.btn-img {
+  width: 180px;
+  /* cuadrado */
+  height:125px;
+
+  padding: 0;
+  /* sin espacio extra */
+  border: none;
+  /* opcional */
+  background: none;
+  /* opcional */
+  cursor: pointer;
+  /* mano al pasar */
+  margin: 7px;
 }
 
-.botones button:hover {
-    background-color: #0056b3; /*color de fondo al pasar el ratón*/
+.btn-small {
+  width: 120px;   /* más chico */
+  height:95px;
+}
+
+.btn-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* la imagen entra completa */
+}
+
+.btn-img:hover img {
+  content: url("../src/botones/estado animo/bien-hover.png");
+}
+
+.btn-img2:hover img {
+  content: url("../src/botones/estado animo/regular-hover.png");
+}
+
+.btn-img3:hover img {
+  content: url("../src/botones/estado animo/mal-hover.png");
+}
+
+.btn-img4:hover img {
+  content: url("../src/botones/estado animo/estupendo-hover.png");
+}
+
+.btn-img5:hover img {
+  content: url("../src/botones/estado animo/nolose-hover.png");
 }
 
 
+
+
+.btn-imgd {
+  width: 65px;
+  /* cuadrado */
+  height: 65px;
+  padding: 0;
+  /* sin espacio extra */
+  border: none;
+  /* opcional */
+  background: none;
+  /* opcional */
+  cursor: pointer;
+  /* mano al pasar */
+  margin: 7px;
+}
+
+.btn-imgd img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* ajusta la imagen al cuadrado */
+}
+
+
+
+.btn-img1d:hover img {
+    content: url("../src/botones/dolor/1-hover.png");
+}
+
+.btn-img2d:hover img {
+    content: url("../src/botones/dolor/2-hover.png");
+}
+
+.btn-img3d:hover img {
+    content: url("../src/botones/dolor/3-hover.png");
+}
+
+.btn-img4d:hover img {
+    content: url("../src/botones/dolor/4-hover.png");
+}
+
+.btn-img5d:hover img {
+    content: url("../src/botones/dolor/5-hover.png");
+}
+
+.btn-img6d:hover img {
+    content: url("../src/botones/dolor/6-hover.png");
+}
+
+.btn-img7d:hover img {
+    content: url("../src/botones/dolor/7-hover.png");
+}
+
+.btn-img8d:hover img {
+    content: url("../src/botones/dolor/8-hover.png");
+}
+
+.btn-img9d:hover img {
+    content: url("../src/botones/dolor/9-hover.png");
+}
+
+.btn-img10d:hover img {
+    content: url("../src/botones/dolor/10-hover.png");
+}
+
+.btn-img11d:hover img {
+    content: url("../src/botones/dolor/nolose-hover.png");
+}
+
+
+
+.NS img {
+  max-width: 65px;
+  /* tamaño fijo o relativo */
+  height: auto;
+  /* mantiene proporción */
+    border-radius: 50%;   /* círculo perfecto */
+
+}
+
+.NS button{
+  max-width: 45px;
+}
+
+.NS h4 {
+  text-align:start;
+  text-align:center;
+  /* centrar texto*/
+  font-size: 1.1rem;
+  /* tamaño de la fuente*/
+  color: #1E3754;
+  /* color del texto*/
+  padding: 10px;
+}

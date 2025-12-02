@@ -1,117 +1,290 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mi Proyecto Web</title>
-  
+
   <!-- Estilos globales -->
-    <link rel="stylesheet" href="../css/cucharadas.css" />
+  <link rel="stylesheet" href="../css/cucharadas.css" />
   <link rel="stylesheet" href="../css/styles.css" />
 
-<!-- Rubik -->
-<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <!-- Rubik -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
 
-<!-- Poppins -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <!-- Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
-    <div class="layout">
-      <aside class="socalo"></aside>
-      <div class="central">
+  <div class="layout">
+    <aside class="socalo"></aside>
+    <div class="central">
 
-    <!-- Header (encabezado) / Navbar (barra de navegacion) -->
-  <header>
-     <img src="../src\logo\logo.png" alt="Logo de la empresa" class="logo">
-   </header>
-    
-    <nav class="menu">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="cuestionario.html">Tú Estado</a></li>
-        <li><a href="cucharadas.html">Tú Energía</a></li>
-        <li><a href="calendario.html">Calendario</a></li>
-        <li><a href="informeEstadistico.html">Informe Estadistico</a></li>
-        <li><a href="revista/indice.html">Revista informativa</a></li>
-        <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
+      <!-- Header (encabezado) / Navbar (barra de navegacion) -->
+      <header>
+        <img src="../src\logo\logo.png" alt="Logo de la empresa" class="logo">
+                <div id="tarjetaDinamica">
+          <div id="valorEnergia">
+            
+          </div>
 
-  <!-- Sección principal -->
-  <main>
-    <section id="cuestionarioDeEnergia">
-      <h2>Descripcion del segmento</h2>
-      
-      <div class="card">
+        </div>
+
+      </header>
+
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="cuestionario.html">Tú Estado</a></li>
+          <li><a href="cucharadas.html">Tú Energía</a></li>
+          <li><a href="calendario.html">Calendario</a></li>
+          <li><a href="informeEstadistico.html">Informe Estadistico</a></li>
+          <li><a href="revista/indice.html">Revista informativa</a></li>
+          <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Sección principal -->
+      <main class="contenido">
+
+        <div class="card">
+          
+          
+          
+          <div class="contenedor">
+            <!-- Imagen de la tarjeta -->
+            <div class="imagen">
+              <img src="../src/tarjetaEnergia/tarjetaEnergia.png" />
+            </div>
+          <div class="contienePregunta">
+            <div class="titulo">
+            <h4>¿Cuantas cucharadas de energia tengo para el día de hoy?</h4>
+          </div>
+            <!-- botones de la tarjeta -->
+            <div class="botones">
+
+              <button class="btn-img btn-img1 btnEnergia" data-valorEnergia="1">
+               <img src="../src/botones/cucharadas-energia/1.png" alt="Botón">
+
+
+              </button>
+
+              <button class="btn-img btn-img2 btnEnergia" data-valorEnergia="2">
+                <img src="../src/botones/cucharadas-energia/2.png" alt="Botón">
+              </button>
+
+              <button class="btn-img btn-img3 btnEnergia" data-valorEnergia="3">
+                <img src="../src/botones/cucharadas-energia/3.png" alt="Botón">
+              </button>
+
+              <button class="btn-img btn-img4 btnEnergia" data-valorEnergia="4">
+                <img src="../src/botones/cucharadas-energia/4.png" alt="Botón">
+              </button>
+              <button class="btn-img btn-img5 btnEnergia" data-valorEnergia="5">
+                <img src="../src/botones/cucharadas-energia/5.png" alt="Botón">
+              </button>
+              <button class="btn-img btn-img6 btnEnergia" data-valorEnergia="6">
+                <img src="../src/botones/cucharadas-energia/6.png" alt="Botón">
+              </button>
+              <button class="btn-img btn-img7 btnEnergia" data-valorEnergia="7">
+                <img src="../src/botones/cucharadas-energia/7.png" alt="Botón">
+              </button>
+              <button class="btn-img btn-img8 btnEnergia" data-valorEnergia="8">
+                <img src="../src/botones/cucharadas-energia/8.png" alt="Botón">
+              </button>
+              <button class="btn-img btn-img9 btnEnergia" data-valorEnergia="9">
+                <img src="../src/botones/cucharadas-energia/9.png" alt="Botón">
+              </button>
+              <button class="btn-img btn-img10 btnEnergia" data-valorEnergia="10">
+                <img src="../src/botones/cucharadas-energia/10.png" alt="Botón">
+              </button>
+              <button class="btn-img btn-img11 btnEnergia" data-valorEnergia="11">
+                <img src="../src/botones/cucharadas-energia/11.png" alt="Botón">
+
+                <button class="btn-img btn-img12 btnEnergia" data-valorEnergia="12">
+                  <img src="../src/botones/cucharadas-energia/12.png" alt="Botón">
+                </button>
+
+                <button id="openModal" class="btn-img btn-img13" data-valorEnergia="13">
+                  <img src="../src/botones/cucharadas-energia/NO LO SE.png" alt="Botón">
+                </button>
+                
+            </div>
+          </div>
+          </div>
+          </div>
+
+
+<!-- ventana emergente, diferentes tarjetas explicando cada puntuacion de energia-->
         
-        <!-- Titulo de la tarjeta -->
-          <div class="titulo"> <h2>Midamos el dolor</h2>
-            </div>
+<div id="modal" class="modal">
 
-                <div class="contenedor" >     
-        <!-- Imagen de la tarjeta -->
-          <div class="imagen"><img src= "../portal-del-paciente-entrega-final-2025/imagenes/IMAGEN REF.jpg"/>
-            </div>
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
 
 
-        <!-- botones de la tarjeta -->
-        <div class="botones">
 
-        <button >1</button>
-         <button >2</button>
-          <button >3</button>
-           <button >4</button>
-            <button >5</button>
-             <button >6</button>
-              <button >7</button>
-               <button >8</button>
-                <button >9</button>
-                <button >10</button>
-                 <button >No lo se</button>
-         </div>
 
-         </div>
 
-      </div>
-
-       <div class="card">
-
-        <!-- Titulo de la tarjeta -->
-          <div class="titulo"> <h2>No lo se</h2>
-            </div>
-
-                <div class="contenedor" >
-        <!-- Imagen de la tarjeta -->
-          <div class="imagen"> <img src= "../portal-del-paciente-entrega-final-2025/imagenes/IMAGEN REF.jpg"/>
+       <div class="cards-container"> 
+      <!-- le agrego una clase especifica para adatpar el div-->
+        <div class="card emergente">
+          
+          
+          
+          <div class="contenedor">
+            <!-- Imagen de la tarjeta -->
+            <div class="imagen">
+              <img src="../src/botones/no lo se d-e/no lo se 6.png" />
             </div>
 
 
-        <!-- botones de la tarjeta -->
-        <div class="botones">
 
-        <div><button >1</button> <h4 >Descripcion de la puntuacion</h4> </div>
-         <div><button >2</button> <h4 >Descripcion de la puntuacion</h4> </div>
-          <div><button >3</button> <h4 >Descripcion de la puntuacion</h4> </div>
-           <div><button >4</button> <h4 >Descripcion de la puntuacion</h4> </div>
-            <div><button >5</button> <h4 >Descripcion de la puntuacion</h4> </div>
-             <div><button >6</button> <h4 >Descripcion de la puntuacion</h4> </div>
-              <div><button >7</button> <h4 >Descripcion de la puntuacion</h4> </div>
-               <div><button >8</button> <h4 >Descripcion de la puntuacion</h4> </div>
-                <div><button >9</button> <h4 >Descripcion de la puntuacion</h4> </div>
-                <div><button >10</button> <h4 >Descripcion de la puntuacion</h4> </div>
-                 <div><button >Midamos el nivel del dolor</button> </div>
-         </div>
-                     </div>
+          <div class="contienePregunta">
+            <div class="titulo">
+            <h4>Muy poca energía, apenas podré hacer algo o lo indispensable del dia, tendre que priorizar lo necesario</h4>
+          </div>
+            <!-- botones de la tarjeta -->
+            <div class="botones">
 
+              <button class="btn-img btn-img1 btnEnergia" data-valorEnergia="1">
+                <img src="../src/botones/cucharadas-energia/1.png" alt="Botón">
+              </button>
+
+              <button class="btn-img btn-img2 btnEnergia" data-valorEnergia="2">
+                <img src="../src/botones/cucharadas-energia/2.png" alt="Botón">
+              </button>
+
+              <button class="btn-img btn-img3 btnEnergia" data-valorEnergia="3">
+                <img src="../src/botones/cucharadas-energia/3.png" alt="Botón">
+              </button>
+                
+            </div>
            </div>
+ </div>
+ </div>
+                  <div class="card emergente">
+          
+          
+          
+          <div class="contenedor">
+            <!-- Imagen de la tarjeta -->
+            <div class="imagen">
+              <img src="../src/botones/no lo se d-e/no lo se 1.png" />
+            </div>
 
-           </section>
-  </main>
 
 
+          <div class="contienePregunta">
+            <div class="titulo">
+            <h4>Un poco de energía, puedo realizar mis tareas indispensables sin agobiarme, si intento hacer de más, podría tener algún inconveniente o empezar mal el día de mañana</h4>
+          </div>
+            <!-- botones de la tarjeta -->
+            <div class="botones">
+
+              
+           <button class="btn-img btn-img4 btnEnergia" data-valorEnergia="4">
+                <img src="../src/botones/cucharadas-energia/4.png" alt="Botón">
+              </button>
+              <button class="btn-img btn-img5 btnEnergia" data-valorEnergia="5">
+                <img src="../src/botones/cucharadas-energia/5.png" alt="Botón">
+              </button>
+              <button class="btn-img btn-img6 btnEnergia" data-valorEnergia="6">
+                <img src="../src/botones/cucharadas-energia/6.png" alt="Botón">
+              </button>
+
+
+              
+
+                
+            </div>
+ </div>
+
+            </div>
+ </div>
+
+
+         <div class="card emergente">
+          
+          
+          
+          <div class="contenedor">
+            <!-- Imagen de la tarjeta -->
+            <div class="imagen">
+              <img src="../src/botones/no lo se d-e/no lo se 5.png" />
+            </div>
+
+
+
+          <div class="contienePregunta">
+            <div class="titulo">
+            <h4>Tengo mucha energía, podría hacer todo lo que quiero sin problemas, siempre siendo consciente de mis limitaciones para empezar bien mañana</h4>
+          </div>
+            <!-- botones de la tarjeta -->
+            <div class="botones">
+
+
+
+                  <button class="btn-img btn-img7 btnEnergia" data-valorEnergia="7">
+                <img src="../src/botones/cucharadas-energia/7.png" alt="Botón">
+              </button>
+              <button class="btn-img btn-img8 btnEnergia" data-valorEnergia="8">
+                <img src="../src/botones/cucharadas-energia/8.png" alt="Botón">
+              </button>
+                <button class="btn-img btn-img9 btnEnergia" data-valorEnergia="9">
+                <img src="../src/botones/cucharadas-energia/9.png" alt="Botón">
+              </button>
+                
+            </div>
+           </div>
+ </div>
+ </div>
+
+          <div class="card emergente">
+          
+          
+          
+          <div class="contenedor">
+            <!-- Imagen de la tarjeta -->
+            <div class="imagen">
+              <img src="../src/botones/no lo se d-e/no lo se 3.png" />
+            </div>
+
+
+            
+            <div class="contienePregunta">
+            <div class="titulo">
+            <h4>Es dificil que suceda, pero hoy me siento mejor que nunca puedo hacer eso que tan imposible se me hacia en otro momento, siempre siendo consciente de mis limitaciones</h4>
+          </div>
+            <!-- botones de la tarjeta -->
+            <div class="botones">
+
+              <button class="btn-img btn-img10 btnEnergia" data-valorEnergia="10">
+                <img src="../src/botones/cucharadas-energia/10.png" alt="Botón">
+              </button>
+              <button class="btn-img btn-img11 btnEnergia" data-valorEnergia="11">
+                <img src="../src/botones/cucharadas-energia/11.png" alt="Botón">
+
+                <button class="btn-img btn-img12 btnEnergia" data-valorEnergia="12">
+                  <img src="../src/botones/cucharadas-energia/12.png" alt="Botón">
+                </button>
+            </div>
+           </div>
+ </div>
+ </div>
+       </div>
+ 
+ </div>
+  </div>
+        </main>
+        
+        
+       
 <!-- Footer -->
 <footer>
   <p>&copy; Sanamente 2025 <img src="../src\logo\logo footer.png" alt="Logo de la empresa" class="logo-footer"></p>
@@ -123,9 +296,12 @@
 
 </div>
 
-<!-- Scripts -->
-<script src="../js/app.js"></script>
 
 </body>
+
+
+<!-- Scripts -->
+<script src="../js/app.js"></script>
+<script src="../js/cucharadas.js"></script>
 
 </html>
