@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanamente - Mi Perfil</title>
+
+  <link rel="stylesheet" href="../css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="layout">
+  <aside class="socalo"></aside>
+
+  <div class="central">
+
+    <header>
+      <img src="../src/logo/logo.png" class="logo" alt="Logo">
+    </header>
+
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a class="active" href="profile.html">Mi Perfil</a></li>
+      </ul>
+    </nav>
+
+    <main class="contenido">
+      <section id="perfil">
+        <div class="form-container">
+          <h2>¡Hola, <span id="nombreUsuario"></span>! 👋</h2>
+          <p>Gracias por formar parte de Sanamente 💜</p>
+          <button class="logout" onclick="cerrarSesion()">Cerrar sesión</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; Sanamente 2025 
+        <img src="../src/logo/logo footer.png" class="logo-footer" alt="Logo Sanamente">
+      </p>
+    </footer>
+
+  </div>
+
+  <aside class="socalo"></aside>
+</div>
+
+<script src="../js/login.js"></script>
+</body>
+</html>

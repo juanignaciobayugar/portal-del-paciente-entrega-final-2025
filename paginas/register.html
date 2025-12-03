@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanamente - Registro</title>
+
+  <link rel="stylesheet" href="../css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="layout">
+  <aside class="socalo"></aside>
+  <div class="central">
+
+    <header>
+      <img src="../src/logo/logo.png" class="logo" alt="Logo">
+    </header>
+
+    <main class="contenido">
+      <section id="register">
+        <div class="form-container">
+          <h2>Crear cuenta</h2>
+
+          <input type="text" id="nombre" placeholder="Nombre y Apellido" required>
+          <input type="email" id="email" placeholder="Correo electrónico" required>
+          <input type="password" id="password" placeholder="Contraseña" required>
+
+          <button onclick="registrarUsuario()">Registrarme</button>
+
+          <p>¿Ya tienes una cuenta?
+            <a href="login.html">Iniciar sesión</a>
+          </p>
+
+          <p class="mensaje-exito" id="registroExito">✔ Cuenta creada con éxito</p>
+          <p class="mensaje-error" id="registroError">Por favor, completa todos los campos.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; Sanamente 2025 
+        <img src="../src/logo/logo footer.png" class="logo-footer" alt="Logo Sanamente">
+      </p>
+    </footer>
+
+  </div>
+  <aside class="socalo"></aside>
+</div>
+
+<script src="../js/login.js"></script>
+</body>
+</html>
