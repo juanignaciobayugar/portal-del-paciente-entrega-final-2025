@@ -18,14 +18,14 @@
 }
 
 .titulo {
-  text-align:start;
   text-align:center;
   /* centrar texto*/
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   /* tamaño de la fuente*/
   color: #1E3754;
   /* color del texto*/
   padding: 10px;
+  margin: 0;
 }
 
 .contenedor {
@@ -190,26 +190,123 @@
 
 
 
-.NS img {
-  max-width: 65px;
+
+
+/*modal de ventana emergente y sus hijos*/
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none; /* oculto por defecto */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 5px;
+  border-radius: 15px;
+  min-width: 450px;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.modal.visible {
+  display: flex; /* se muestra cuando tiene la clase visible */
+}
+
+.close {
+  cursor: pointer;
+  float: right;
+  font-size: 20px;
+}
+
+/*propiedades contenedor emergente */
+.cards-container{
+  display: grid;
+  gap: 5px;
+  width: 100%;
+}
+
+
+.emergente{
+max-height: 170px;
+ box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;              /* asegura que el contenido se acomode */
+  flex-direction: column;     /* apila elementos verticalmente */
+  align-items: center;        /* centra botones e imágenes */
+             /* nunca más chica que este ancho */
+  flex: 1;                    /* ocupa espacio proporcional */
+}
+
+.emergente button {
+  width: 100%;                /* ocupa todo el ancho disponible */
+  flex-shrink: 1;             /* se achica proporcionalmente */
+  max-width: 40px;
+   display: inline-block;   /* asegura que respete su caja */
+  overflow: hidden;        /* evita que se desborde el contenido */
+}
+
+
+.emergente img {
+  max-width: 55px;
   /* tamaño fijo o relativo */
   height: auto;
   /* mantiene proporción */
-    border-radius: 50%;   /* círculo perfecto */
-
+  border-radius: 50%;   /* círculo perfecto */
+  
 }
 
-.NS button{
-  max-width: 45px;
-}
 
-.NS h4 {
-  text-align:start;
+.emergente h4 {
   text-align:center;
   /* centrar texto*/
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   /* tamaño de la fuente*/
   color: #1E3754;
   /* color del texto*/
-  padding: 10px;
+}
+
+
+/*div que se encuentra en header, representando energia*/
+#valorEstado {
+  display: flex;        /* o block, según lo que quieras */
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente si tiene altura fija */
+  flex-wrap: wrap;      /* si puede haber más de un botón */
+  overflow: hidden;     /* evita que se desborde */
+  width: 100%;          /* o un ancho fijo */
+}
+
+
+
+#valorEstado button {
+  width: 40px;        /* ancho fijo */
+  height: 40px;        /* alto fijo */
+}
+
+
+/*div que se encuentra en header, representando energia*/
+#valorDolor {
+  display: flex;        /* o block, según lo que quieras */
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente si tiene altura fija */
+  flex-wrap: wrap;      /* si puede haber más de un botón */
+  overflow: hidden;     /* evita que se desborde */
+  width: 100%;          /* o un ancho fijo */
+}
+
+
+
+#valorDolor button {
+  width: 40px;        /* ancho fijo */
+  height: 40px;        /* alto fijo */
+}
+
+#tarjetaDinamica {
+  float: right;
 }

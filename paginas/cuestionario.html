@@ -26,7 +26,16 @@
       <!-- Header (encabezado) / Navbar (barra de navegacion) -->
       <header>
         <img src="../src\logo\logo.png" alt="Logo de la empresa" class="logo">
+                <div id="tarjetaDinamica">
+          <div id="valorEstado">
+            
+          </div>
 
+           <div id="valorDolor">
+          </div>
+
+
+        </div>
       </header>
 
       <nav class="menu">
@@ -62,22 +71,22 @@
             <!-- botones de la tarjeta -->
             <div class="botones">
 
-              <button class="btn-img btn-img1 btn-small">
+              <button class="btn-img btn-img1 btn-small btnEstado" data-valorEstado="bien">
                 <img src="../src/botones/estado animo/bien.png" alt="Botón">
               </button>
 
-              <button class="btn-img btn-img2">
+              <button class="btn-img btn-img2 btnEstado" data-valorEstado="regular">
                 <img src="../src/botones/estado animo/regular.png" alt="Botón">
               </button>
 
-              <button class="btn-img btn-img3 btn-small">
+              <button class="btn-img btn-img3 btn-small btnEstado"data-valorEstado="mal">
                 <img src="../src/botones/estado animo/MAL.png" alt="Botón">
               </button>
 
-              <button class="btn-img btn-img4">
+              <button class="btn-img btn-img4 btnEstado" data-valorEstado="estupendo">
                 <img src="../src/botones/estado animo/estupendo.png" alt="Botón">
               </button>
-              <button class="btn-img btn-img5">
+              <button id="estadoModal" class="btn-img btn-img5">
                 <img src="../src/botones/estado animo/nolose.png" alt="Botón">
               </button>
                 
@@ -105,46 +114,46 @@
             <!-- botones de la tarjeta -->
             <div class="botones">
 
-              <button class="btn-imgd btn-img1d">
+              <button class="btn-imgd btn-img1d btnDolor" data-valorDolor="1">
                 <img src="../src/botones/dolor/1.png" alt="Botón">
               </button>
 
-              <button class="btn-imgd btn-img2d">
+              <button class="btn-imgd btn-img2d btnDolor" data-valorDolor="2">
                 <img src="../src/botones/dolor/2.png" alt="Botón">
               </button>
 
-              <button class="btn-imgd btn-img3d ">
+              <button class="btn-imgd btn-img3d btnDolor" data-valorDolor="3">
                 <img src="../src/botones/dolor/3.png" alt="Botón">
               </button>
 
-              <button class="btn-imgd btn-img4d">
+              <button class="btn-imgd btn-img4d btnDolor" data-valorDolor="4">
                <img src="../src/botones/dolor/4.png" alt="Botón">
               </button>
-              <button class="btn-imgd btn-img5d">
+              <button class="btn-imgd btn-img5d btnDolor" data-valorDolor="5">
                 <img src="../src/botones/dolor/5.png" alt="Botón">
               </button>
 
-                <button class="btn-imgd btn-img6d">
+                <button class="btn-imgd btn-img6d btnDolor" data-valorDolor="6">
                 <img src="../src/botones/dolor/6.png" alt="Botón">
               </button>
 
-                <button class="btn-imgd btn-img7d">
+                <button class="btn-imgd btn-img7d btnDolor" data-valorDolor="7">
                 <img src="../src/botones/dolor/7.png" alt="Botón">
               </button>
 
-                <button class="btn-imgd btn-img8d">
+                <button class="btn-imgd btn-img8d btnDolor" data-valorDolor="8">
                 <img src="../src/botones/dolor/8.png" alt="Botón">
               </button>
 
-                <button class="btn-imgd btn-img9d">
+                <button class="btn-imgd btn-img9d btnDolor" data-valorDolor="9">
                 <img src="../src/botones/dolor/9.png" alt="Botón">
               </button>
 
-                <button class="btn-imgd btn-img10d">
+                <button class="btn-imgd btn-img10d btnDolor" data-valorDolor="10">
                 <img src="../src/botones/dolor/10.png" alt="Botón">
               </button>
 
-                <button class="btn-imgd btn-img11d ">
+                <button id="dolorModal" class="btn-imgd btn-img11d" data-valorDolor="11">
                 <img src="../src/botones/dolor/nolose.png" alt="Botón">
               </button>
                 
@@ -159,16 +168,24 @@
 
           
 
-
-          <div>
+<!-- ventana emergente, diferentes tarjetas explicando cada puntuacion de energia-->
+        
+<div id="modal-dolor" class="modal">
+    <div class="modal-content">
+      <span id="closeModalEstado" class="close">&times;</span>
+       <div class="cards-container"> 
+        
           
-        <div class="card">
-          
-          
-          
-          <div class="contenedor NS">
+      <!-- le agrego una clase especifica para adatpar el div-->
+        <div class="card emergente">          
+          <div class="contenedor">
             <!-- Imagen de la tarjeta -->
-            <div class="imagen NS">
+          
+          
+          
+          <div class="contenedor">
+            <!-- Imagen de la tarjeta -->
+            <div class="imagen">
               <img src="../src/botones/no lo se d-e/no lo se 2.png" />
             </div>
 
@@ -180,16 +197,15 @@
           </div>
             <!-- botones de la tarjeta -->
             <div class="botones">
-
-              <button class="btn-imgd btn-img1d">
+              <button class="btn-imgd btn-img1d btnDolor" data-valorDolor="1">
                 <img src="../src/botones/dolor/1.png" alt="Botón">
               </button>
 
-              <button class="btn-imgd btn-img2d">
+              <button class="btn-imgd btn-img2d btnDolor" data-valorDolor="2">
                 <img src="../src/botones/dolor/2.png" alt="Botón">
               </button>
 
-              <button class="btn-imgd btn-img3d ">
+              <button class="btn-imgd btn-img3d btnDolor" data-valorDolor="3">
                 <img src="../src/botones/dolor/3.png" alt="Botón">
               </button>
 
@@ -198,13 +214,14 @@
            </div>
  </div>
  </div>
-                  <div class="card">
-          
-          
-          
-          <div class="contenedor NS">
+ </div>
+       
+              <div class="cards-container"> 
+      <!-- le agrego una clase especifica para adatpar el div-->
+        <div class="card emergente">          
+          <div class="contenedor">
             <!-- Imagen de la tarjeta -->
-            <div class="imagen NS">
+            <div class="imagen">
               <img src="../src/botones/no lo se d-e/no lo se 5.png" />
             </div>
 
@@ -217,15 +234,15 @@
             <!-- botones de la tarjeta -->
             <div class="botones">
 
-              <button class="btn-imgd btn-img4d">
-                <img src="../src/botones/dolor/4.png" alt="Botón">
-              </button>
 
-              <button class="btn-imgd btn-img5d">
+              <button class="btn-imgd btn-img4d btnDolor" data-valorDolor="4">
+               <img src="../src/botones/dolor/4.png" alt="Botón">
+              </button>
+              <button class="btn-imgd btn-img5d btnDolor" data-valorDolor="5">
                 <img src="../src/botones/dolor/5.png" alt="Botón">
               </button>
 
-              <button class="btn-imgd btn-img6d ">
+                <button class="btn-imgd btn-img6d btnDolor" data-valorDolor="6">
                 <img src="../src/botones/dolor/6.png" alt="Botón">
               </button>
 
@@ -236,14 +253,14 @@
             </div>
  </div>
 
+</div>
 
-         <div class="card">
-          
-          
-          
-          <div class="contenedor NS">
+              <div class="cards-container"> 
+      <!-- le agrego una clase especifica para adatpar el div-->
+        <div class="card emergente">          
+          <div class="contenedor">
             <!-- Imagen de la tarjeta -->
-            <div class="imagen NS">
+            <div class="imagen">
               <img src="../src/botones/no lo se d-e/no lo se 1.png" />
             </div>
 
@@ -256,15 +273,15 @@
             <!-- botones de la tarjeta -->
             <div class="botones">
 
-              <button class="btn-imgd btn-img1d">
+                <button class="btn-imgd btn-img7d btnDolor" data-valorDolor="7">
                 <img src="../src/botones/dolor/7.png" alt="Botón">
               </button>
 
-              <button class="btn-imgd btn-img2d">
+                <button class="btn-imgd btn-img8d btnDolor" data-valorDolor="8">
                 <img src="../src/botones/dolor/8.png" alt="Botón">
               </button>
 
-              <button class="btn-imgd btn-img3d ">
+                <button class="btn-imgd btn-img9d btnDolor" data-valorDolor="9">
                 <img src="../src/botones/dolor/9.png" alt="Botón">
               </button>
 
@@ -273,14 +290,14 @@
            </div>
  </div>
  </div>
-
-          <div class="card">
-          
-          
-          
-          <div class="contenedor NS">
+ </div>
+              <div class="cards-container"> 
+      <!-- le agrego una clase especifica para adatpar el div-->
+        <div class="card emergente">          
+          <div class="contenedor">
             <!-- Imagen de la tarjeta -->
-            <div class="imagen NS">
+            <div class="imagen">
+ 
               <img src="../src/botones/no lo se d-e/no lo se 6.png" />
             </div>
 
@@ -293,60 +310,132 @@
             <!-- botones de la tarjeta -->
             <div class="botones">
 
-              <button class="btn-imgd btn-img1d">
+                <button class="btn-imgd btn-img10d btnDolor" data-valorDolor="10">
                 <img src="../src/botones/dolor/10.png" alt="Botón">
               </button>
             </div>
            </div>
  </div>
  </div>
+       </div>
+ </div>
+  </div>
+  </div>
 
-<div>
-          <div class="card">
-          
-          
-          
-          <div class="contenedor NS">
+<!-- ventana emergente, diferentes tarjetas explicando cada puntuacion de energia-->
+        
+<div id="modal-estado" class="modal">
+    <div class="modal-content">
+      <span id="closeModalEstado" class="close">&times;</span>
+       <div class="cards-container"> 
+      <!-- le agrego una clase especifica para adatpar el div-->
+        <div class="card emergente">          
+          <div class="contenedor">
             <!-- Imagen de la tarjeta -->
-            <div class="imagen NS">
-              <img src="../src/botones/no lo se d-e/no lo se 6.png" />
+            <div class="imagen">
+              <img src="../src/botones/no lo se d-e/no lo se 3.png" />
             </div>
-
-
             
             <div class="contienePregunta">
             <div class="titulo">
-            <h4>Imposible continuar, estoy incapacitado para todo tipo de actividades</h4>
+            <h4> Hoy me siento bien de animo, estoy optimista, siento que puedo con mis cosas, le encuentro lo positivo a todo</h4>
           </div>
             <!-- botones de la tarjeta -->
             <div class="botones">
 
-              <button class="btn-imgd btn-img1d">
+              <button class="btn-img btn-img1 btn-small btnEstado" data-valorEstado="bien">
                 <img src="../src/botones/estado animo/bien.png" alt="Botón">
               </button>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
            </div>
  </div>
  </div>
+       </div>
 
 
 
+
+              <div class="cards-container"> 
+      <!-- le agrego una clase especifica para adatpar el div-->
+        <div class="card emergente">          
+          <div class="contenedor">
+            <!-- Imagen de la tarjeta -->
+            <div class="imagen">
+              <img src="../src/botones/no lo se d-e/no lo se 1.png" />
+            </div>
+            
+            <div class="contienePregunta">
+            <div class="titulo">
+            <h4> Hoy no me siento tan bien, me falto un poco para estar contento, si bien puedo hacer mis cosas, no me estoy divirtiendo, ni estoy en mis mejores días</h4>
+          </div>
+            <!-- botones de la tarjeta -->
+            <div class="botones">
+
+              <button class="btn-img btn-img2 btnEstado" data-valorEstado="regular">
+                <img src="../src/botones/estado animo/regular.png" alt="Botón">
+              </button>
+            </div>
+           </div>
+ </div>
+ </div>
+       </div>
+
+                     <div class="cards-container"> 
+      <!-- le agrego una clase especifica para adatpar el div-->
+        <div class="card emergente">          
+          <div class="contenedor">
+            <!-- Imagen de la tarjeta -->
+            <div class="imagen">
+              <img src="../src/botones/no lo se d-e/no lo se 6.png" />
+            </div>
+            
+            <div class="contienePregunta">
+            <div class="titulo">
+            <h4> Hoy no puedo con mí día, por más que intento y trato, no estoy contento, me falta buena voluntad, va a costar y tendré que poner un esfuerzo considerado de mi parte para llevar el día adelante</h4>
+          </div>
+            <!-- botones de la tarjeta -->
+            <div class="botones">
+
+              <button class="btn-img btn-img3 btn-small btnEstado" data-valorEstado="mal">
+                <img src="../src/botones/estado animo/MAL.png" alt="Botón">
+              </button>
+            </div>
+           </div>
+ </div>
+ </div>
+       </div>
+ 
+ 
+                     <div class="cards-container"> 
+      <!-- le agrego una clase especifica para adatpar el div-->
+        <div class="card emergente">          
+          <div class="contenedor">
+            <!-- Imagen de la tarjeta -->
+            <div class="imagen">
+              <img src="../src/botones/no lo se d-e/no lo se 2.png" />
+            </div>
+            
+            <div class="contienePregunta">
+            <div class="titulo">
+            <h4> Hoy me siento mejor que nunca, estoy enérgico, estoy contento, tengo ganas de hacer y puedo practicar mi creatividad con estusiasmo, estoy dispuesto realizar todo lo que me propongo</h4>
+          </div>
+            <!-- botones de la tarjeta -->
+            <div class="botones">
+
+              <button class="btn-img btn-img4 btnEstado" data-valorEstado="estupendo">
+                <img src="../src/botones/estado animo/estupendo.png" alt="Botón">
+              </button>
+            </div>
+           </div>
+ </div>
+ </div>
+       </div>
+ 
+
+
+ </div>
+  </div>
         </main>
-        
-        
-       
 <!-- Footer -->
 <footer>
   <p>&copy; Sanamente 2025 <img src="../src\logo\logo footer.png" alt="Logo de la empresa" class="logo-footer"></p>
@@ -358,9 +447,12 @@
 
 </div>
 
-<!-- Scripts -->
-<script src="../js/app.js"></script>
 
 </body>
+
+
+<!-- Scripts -->
+<script src="../js/app.js"></script>
+<script src="../js/cuestionario.js"></script>
 
 </html>
