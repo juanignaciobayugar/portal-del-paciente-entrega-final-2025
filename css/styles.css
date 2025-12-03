@@ -15,7 +15,7 @@ body {
 .layout {
   display: grid;
 min-height: 100vh; /* los socalos ocupan todo el alto */
-grid-template-columns: 1fr minmax(0, 1240px) 1fr; /* zócalo - central - zócalo */
+grid-template-columns: 1fr minmax(0, 1340px) 1fr; /* zócalo - central - zócalo */
 }
 /* Columna central */
 .central {
@@ -31,7 +31,7 @@ header {
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* todo alineado a la izquierda */
+  justify-content: space-between; /* logo a la izquierda, tarjeta a la derecha */
 }
 
 
