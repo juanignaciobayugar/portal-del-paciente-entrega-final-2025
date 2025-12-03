@@ -26,7 +26,7 @@
   text-decoration: underline;
 }
 
-/* 🔹 GRID 2 columnas SIEMPRE en escritorio */
+/* 🔹 GRID 2 columnas en escritorio */
 .sobre-cards {
   display: grid;
   width: 100%;
@@ -47,7 +47,14 @@
   background: #fff;
   padding: 22px;
   border-radius: 14px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+  /* Nueva base más suave */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+  /* Para que el hover se note más */
+  border: 2px solid transparent;
+
+  transition: all 0.3s ease;
 }
 
 .card h3 {
@@ -68,13 +75,27 @@
   display: inline-block;
 }
 
-/* Animación suave */
-.card {
-  transition: all 0.25s ease;
-}
-
+/* 🌟 HOVER MEJORADO — mirada profesional */
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transform: translateY(-10px) scale(1.02);
+
+  /* Borde visible */
+  border-color: #4b3f72;
+
+  /* Sombra profunda + glow suave violeta */
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.22),
+    0 0 12px rgba(130, 115, 230, 0.35);
 }
 
+
+/* Eliminar texto "Volver" en header interno */
+.subpage-header .back-btn,
+.subpage-header a.back-btn {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}
