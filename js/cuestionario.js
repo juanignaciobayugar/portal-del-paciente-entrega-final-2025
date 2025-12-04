@@ -57,7 +57,7 @@ contenedorEstado.addEventListener("click", () => {
 
 const modalEstado = document.getElementById("modal-estado");
 const openBtnEstado = document.getElementById("estadoModal");
-const closeBtnEstado = document.getElementById("closeModalEstado");
+const closeBtnEstado = document.getElementById("closeModalE");
 
 openBtnEstado.addEventListener("click", () => {
   modalEstado.classList.add("visible");
@@ -136,7 +136,7 @@ contenedorDolor.addEventListener("click", () => {
 
 const modalDolor  = document.getElementById("modal-dolor");
 const openBtnDolor = document.getElementById("dolorModal");
-const closeBtnDolor = document.getElementById("closeModalEstado");
+const closeBtnDolor = document.getElementById("closeModalD");
 
 openBtnDolor.addEventListener("click", () => {
   modalDolor.classList.add("visible");

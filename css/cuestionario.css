@@ -53,6 +53,10 @@
 }
 
 .contienePregunta{
+  display: flex;
+  flex-direction: column;   /* título arriba, botones abajo */
+  align-items: center;      /* centra todo horizontalmente */
+  gap: 10px;                /* espacio entre h4 y botones */
   margin-top: 5px; 
  max-width: 570px;
 }
@@ -241,14 +245,19 @@ max-height: 170px;
   align-items: center;        /* centra botones e imágenes */
              /* nunca más chica que este ancho */
   flex: 1;                    /* ocupa espacio proporcional */
+  gap: 8px;
+
 }
 
 .emergente button {
   width: 100%;                /* ocupa todo el ancho disponible */
   flex-shrink: 1;             /* se achica proporcionalmente */
   max-width: 40px;
+  min-width: 30px;
    display: inline-block;   /* asegura que respete su caja */
   overflow: hidden;        /* evita que se desborde el contenido */
+  margin: 0; /* evita separación extra */
+  line-height: 1.2; /* más compacto */
 }
 
 
@@ -263,12 +272,18 @@ max-height: 170px;
 
 
 .emergente h4 {
+  
   text-align:center;
   /* centrar texto*/
   font-size: 1.0rem;
   /* tamaño de la fuente*/
   color: #1E3754;
   /* color del texto*/
+}
+
+.emergentH4 H4{
+  font-size: 0.9rem;
+
 }
 
 

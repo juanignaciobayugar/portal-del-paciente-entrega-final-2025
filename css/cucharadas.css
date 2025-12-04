@@ -230,6 +230,7 @@ max-height: 170px;
 }
 
 
+
 /*div que se encuentra en header, representando energia*/
 #valorEnergia {
   display: flex;        /* o block, según lo que quieras */
