@@ -1,3 +1,6 @@
+
+
+
 // Variable global para guardar el último número
 let ultimoEstado = null;
 
@@ -19,7 +22,7 @@ Array.from(btnsEstado).forEach(botonEstado => {
     contenedorEstado.innerHTML = ""; // limpiamos por si acaso
     const copia = botonEstado.cloneNode(true); // clona el botón entero // true = clona también hijos
     contenedorEstado.appendChild(copia);
-
+  
     const valorEstado=botonEstado.dataset.valorestado;
     ultimoEstado=valorEstado;
     // Guardar el último valor en localStorage

@@ -7,6 +7,8 @@ let events = JSON.parse(localStorage.getItem("calendarEvents")) || {};
 // Elementos del DOM para mostrar mes/año y los días
 const monthYear = document.getElementById("monthYear");
 const daysContainer = document.getElementById("days");
+// Definís tu constante
+export const API_URL = daysContainer;
 
 // Botones para cambiar de mes
 document.getElementById("prevMonth").onclick = () => changeMonth(-1);
