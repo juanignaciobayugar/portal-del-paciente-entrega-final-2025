@@ -10,20 +10,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<!-- Clase especial para estilos del perfil -->
+<body class="page-profile">
 
 <div class="layout">
   <aside class="socalo"></aside>
 
   <div class="central">
 
+    <!-- Logo -->
     <header>
       <img src="../src/logo/logo.png" class="logo" alt="Logo">
     </header>
 
+    <!-- 💜 Menú especial del perfil -->
     <nav class="menu">
       <ul>
-        <li><a href="index.html">Inicio</a></li>
         <li><a class="active" href="profile.html">Mi Perfil</a></li>
       </ul>
     </nav>
@@ -31,9 +33,14 @@
     <main class="contenido">
       <section id="perfil">
         <div class="form-container">
-          <h2>¡Hola, <span id="nombreUsuario"></span>! 👋</h2>
+
+          <!-- Nombre del usuario insertado por JS -->
+          <h2>¡Bienvenido, <span id="nombreUsuario"></span>! 👋</h2>
           <p>Gracias por formar parte de Sanamente 💜</p>
+
+          <!-- Botón cerrar sesión -->
           <button class="logout" onclick="cerrarSesion()">Cerrar sesión</button>
+
         </div>
       </section>
     </main>

@@ -8,28 +8,28 @@
   <!-- Estilos globales -->
   <link rel="stylesheet" href="../css/styles.css" />
 
-  <!-- Rubik -->
+  <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-  <!-- Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="page-login">
+
 <div class="layout">
   <aside class="socalo"></aside>
 
   <div class="central">
 
-    <!-- Header -->
+    <!-- Logo -->
     <header>
       <img src="../src/logo/logo.png" class="logo" alt="Logo">
     </header>
 
-    <!-- Navbar -->
+    <!-- Navbar general -->
     <nav class="menu">
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="login.html">Login</a></li>
+        <li><a class="active" href="login.html">Login</a></li>
         <li><a href="cuestionario.html">Tú Estado</a></li>
         <li><a href="cucharadas.html">Tú Energía</a></li>
         <li><a href="calendario.html">Calendario</a></li>
@@ -40,12 +40,14 @@
       </ul>
     </nav>
 
-    <!-- Contenido principal -->
+    <!-- Contenido -->
     <main class="contenido">
       <section id="login">
         <div class="form-container">
+
           <h2>Iniciar sesión</h2>
 
+          <!-- Inputs del login -->
           <input type="email" id="emailLogin" placeholder="Correo electrónico" required>
           <input type="password" id="passwordLogin" placeholder="Contraseña" required>
 
@@ -55,7 +57,9 @@
             <a href="register.html">Crear cuenta</a>
           </p>
 
+          <!-- Mensaje de error (se oculta con JS) -->
           <p class="mensaje-error" id="loginError">❌ Usuario o contraseña incorrectos</p>
+
         </div>
       </section>
     </main>
@@ -72,6 +76,7 @@
   <aside class="socalo"></aside>
 </div>
 
+<!-- JS -->
 <script src="../js/login.js"></script>
 </body>
 </html>

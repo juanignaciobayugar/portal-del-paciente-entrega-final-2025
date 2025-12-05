@@ -9,12 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
-<body>
+
+<body class="page-register">
 
 <div class="layout">
   <aside class="socalo"></aside>
+
   <div class="central">
 
+    <!-- Logo -->
     <header>
       <img src="../src/logo/logo.png" class="logo" alt="Logo">
     </header>
@@ -22,8 +25,10 @@
     <main class="contenido">
       <section id="register">
         <div class="form-container">
+
           <h2>Crear cuenta</h2>
 
+          <!-- Inputs del registro -->
           <input type="text" id="nombre" placeholder="Nombre y Apellido" required>
           <input type="email" id="email" placeholder="Correo electrónico" required>
           <input type="password" id="password" placeholder="Contraseña" required>
@@ -34,8 +39,10 @@
             <a href="login.html">Iniciar sesión</a>
           </p>
 
+          <!-- Mensajes ocultos -->
           <p class="mensaje-exito" id="registroExito">✔ Cuenta creada con éxito</p>
           <p class="mensaje-error" id="registroError">Por favor, completa todos los campos.</p>
+
         </div>
       </section>
     </main>
@@ -47,6 +54,7 @@
     </footer>
 
   </div>
+
   <aside class="socalo"></aside>
 </div>
 

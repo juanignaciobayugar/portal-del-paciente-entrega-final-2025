@@ -1,7 +1,6 @@
 /* ============================
-   ESTILOS GENERALES (TODAS LAS PÁGINAS)
+   Estilos generales
 =============================== */
-
 body {
   margin: 0;
   font-family: 'Rubik', sans-serif;
@@ -53,7 +52,7 @@ main.contenido {
 }
 
 /* ============================
-   FORM CONTAINER GENERAL
+   Formularios
 =============================== */
 .form-container {
   background: #fff;
@@ -77,7 +76,6 @@ main.contenido {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
-  box-sizing: border-box;
 }
 
 .form-container button {
@@ -97,15 +95,6 @@ main.contenido {
   background-color: #45a049;
 }
 
-.form-container a {
-  color: #4CAF50;
-  text-decoration: none;
-}
-
-.form-container a:hover {
-  text-decoration: underline;
-}
-
 .mensaje-error {
   color: red;
   margin-top: 10px;
@@ -119,26 +108,8 @@ main.contenido {
 }
 
 /* ============================
-   LOGIN PAGE
+   Perfil
 =============================== */
-.page-login .form-container {
-  /* Estilos específicos del login si necesitás */
-}
-
-/* ============================
-   REGISTER PAGE
-=============================== */
-.page-register .form-container {
-  /* Estilos específicos del registro si necesitás */
-}
-
-/* ============================
-   PROFILE PAGE
-=============================== */
-.page-profile .form-container {
-  text-align: center;
-}
-
 .page-profile .logout {
   background-color: #f44336;
 }
@@ -147,9 +118,7 @@ main.contenido {
   background-color: #e53935;
 }
 
-/* ============================
-   MENU PERFIL
-=============================== */
+/* Menú especial del perfil */
 .page-profile .menu ul {
   list-style: none;
   padding: 0;
