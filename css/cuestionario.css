@@ -461,9 +461,6 @@ margin-right: 5%;
   height: 40px;        /* alto fijo */
 }
 
-
-
-
 .midia{
   width: 30px;
   flex: 1;
@@ -471,12 +468,15 @@ margin-right: 5%;
   flex-direction: column; 
   font-size-adjust: none;
   margin: 0;
+  color: black;
+  font-weight: 300;
 }
 
 .midia H4{
   font-family: 'Rubik', sans-serif;
   text-align: center;
-  font-size: clamp(5px, 0.95vw, 15px);
+  font-size: clamp(5px, 1.95vw, 15px);
+
 }
 
 .Anim {
@@ -555,6 +555,15 @@ margin-right: 5%;
 #valorEnergia button {
   width: 40px;        /* ancho fijo */
   height: 40px;        /* alto fijo */
+}
+
+#diahoy {
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  font-size: clamp(5px, 0.7vw, 15px);
+  line-height: 20px;
+  color:darkslategray;
+
 }
 
 
