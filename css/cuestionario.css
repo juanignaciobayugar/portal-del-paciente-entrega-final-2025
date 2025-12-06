@@ -3,13 +3,13 @@
 .contenido{
   display: flex;
   justify-content:center;
-  gap: 20px; 
+  gap: 10px; 
   flex-direction: column; 
 }
 
 
 .card {
-  width: 85%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -18,7 +18,7 @@
   padding: 2%;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   margin: 0 auto;   /* centra el bloque */
-  max-width: 720px;
+  max-width: 900px;
   min-width: 320px;
  
 }
@@ -82,7 +82,7 @@ font-size: clamp(16px, 1.7vw, 32px);
 
 .btn-img {
   flex: 1;
-  width: none;
+  width: 400px;
   padding: 0;
   border: none;
   background: none;
@@ -91,7 +91,7 @@ font-size: clamp(16px, 1.7vw, 32px);
 }
 
 .btn-img img {
-  width: 84%;
+  width: 100%;
   height: 100%;
   object-fit: contain; /* la imagen entra completa */
 }
@@ -181,6 +181,80 @@ font-size: clamp(16px, 1.7vw, 32px);
 }
 
 
+.btn-imgc {
+  flex: 1;
+  width: none;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.btn-imgc img {
+  width: 130%;
+  height: 100%;
+  object-fit: contain; /* la imagen entra completa */
+}
+
+.btn-img1c:hover img {
+  content: url("../src/botones/cucharadas-energia/1-hover.png");
+}
+
+.btn-img2c:hover img {
+  content: url("../src/botones/cucharadas-energia/2-hover.png");
+}
+
+.btn-img3c:hover img {
+  content: url("../src/botones/cucharadas-energia/3-hover.png");
+}
+
+.btn-img4c:hover img {
+  content: url("../src/botones/cucharadas-energia/4-2.png");
+}
+
+.btn-img5c:hover img {
+  content: url("../src/botones/cucharadas-energia/5-2.png");
+}
+
+.btn-img6c:hover img {
+  content: url("../src/botones/cucharadas-energia/6-2.png");
+}
+
+.btn-img7c:hover img {
+  content: url("../src/botones/cucharadas-energia/7-2.png");
+}
+
+.btn-img8c:hover img {
+  content: url("../src/botones/cucharadas-energia/8-2.png");
+}
+
+.btn-img9c:hover img {
+  content: url("../src/botones/cucharadas-energia/9-2.png");
+}
+
+.btn-img10c:hover img {
+  content: url("../src/botones/cucharadas-energia/10-2.png");
+}
+
+.btn-img11c:hover img {
+  content: url("../src/botones/cucharadas-energia/11-2.png");
+}
+
+.btn-img12c:hover img {
+  content: url("../src/botones/cucharadas-energia/12-2.png");
+}
+
+.btn-img13c:hover img {
+  content: url("../src/botones/cucharadas-energia/nolose-hover.png");
+}
+
+
+
+
+
+
+
 
 
 
@@ -230,13 +304,11 @@ font-size: clamp(16px, 1.7vw, 32px);
   flex-direction: column;
   overflow: hidden;
   border: 2px solid #0b1a28;
-
   background-color: #D4DDE7;
   padding: 1%;
   margin: 0;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   margin: 0 auto;
-
   width: 95%;
 }
 
@@ -295,9 +367,9 @@ margin-right: 5%;
   word-wrap: break-word; /* evita desbordes en emergentes chicos */
 }
 
-.botonesEmergentes .btn-img {
+.botonesEmergentes .btnEstado {
   flex: 1;
-  width: 70px;
+  width: 60px;
   padding: 0;
   border: none;
   background: none;
@@ -305,7 +377,7 @@ margin-right: 5%;
   display: inline-flex;
 }
 
-.botonesEmergentes .btn-img img {
+.botonesEmergentes .btnEstado img {
   width: 100%;
   height: 100%;
   object-fit: contain; /* la imagen entra completa */
@@ -331,6 +403,27 @@ margin-right: 5%;
 }
 
 
+.botonesEmergentes .btnEnergia {
+  flex: 1;
+  width: 50px;
+  padding: 2%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+
+
+.botonesEmergentes .btnEnergia img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* la imagen entra completa */
+}
+
+
+
+
 
 
 /*div que se encuentra en header, representando energia*/
@@ -341,6 +434,7 @@ margin-right: 5%;
   flex-wrap: wrap;      /* si puede haber más de un botón */
   overflow: hidden;     /* evita que se desborde */
   width: 100%;          /* o un ancho fijo */
+   margin-top: 3px;
 }
 
 
@@ -359,17 +453,108 @@ margin-right: 5%;
   flex-wrap: wrap;      /* si puede haber más de un botón */
   overflow: hidden;     /* evita que se desborde */
   width: 100%;          /* o un ancho fijo */
+   margin-top: 3px;
 }
-
-
 
 #valorDolor button {
   width: 40px;        /* ancho fijo */
   height: 40px;        /* alto fijo */
 }
 
+
+
+
+.midia{
+  width: 30px;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction: column; 
+  font-size-adjust: none;
+  margin: 0;
+}
+
+.midia H4{
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  font-size: clamp(5px, 0.95vw, 15px);
+}
+
+.Anim {
+  width: 45px;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction: column; 
+  color: #1E3754;
+  font-size-adjust: none;
+  padding: 1%;
+  margin: 0;
+}
+
+.Anim H4{
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  font-size: clamp(5px, 0.95vw, 15px);
+  line-height: 15px; 
+    line-height: 1;       /* evita que las tildes desplacen demasiado */
+}
+
+
+.Dolo {
+  width: 45px;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction: column; 
+  font-size-adjust: none;
+  margin: 0;
+}
+
+.Dolo H4{
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  font-size: clamp(5px, 0.95vw, 15px);
+  line-height: 20px; 
+}
+
 #tarjetaDinamica {
   float: right;
+  display: flex;
+  max-width: auto;
+  width: 240px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  height: 70px;
+  background-color: #D4DDE7;
+}
+
+.Energi {
+  width: 45px;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction: column; 
+  font-size-adjust: none;
+  margin: 0;
+
+}
+
+.Energi H4{
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  font-size: clamp(5px, 0.95vw, 15px);
+  line-height: 20px; 
+}
+
+/*div que se encuentra en header, representando energia*/
+#valorEnergia {
+  display: flex;        /* o block, según lo que quieras */
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente si tiene altura fija */
+  overflow: hidden;     /* evita que se desborde */
+  width: 100%;          /* o un ancho fijo */
+ margin-top: 3px;
+}
+
+#valorEnergia button {
+  width: 40px;        /* ancho fijo */
+  height: 40px;        /* alto fijo */
 }
 
 
