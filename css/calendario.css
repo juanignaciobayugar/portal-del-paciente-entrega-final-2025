@@ -73,16 +73,11 @@ body {
   border-radius: 8px;
   margin-top: 6px;
   font-size: 13px;
-
-  /* Evita que los botones deformen el contenedor */
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-/* ------------------------------ */
-/* 🔥 Botón editar en verde  */
-/* ------------------------------ */
 .event button.edit-btn {
   background: #07bf41; 
   color: #000;
@@ -93,12 +88,9 @@ body {
   font-weight: bold;
 }
 
-/* ------------------------------ */
-/* Botón eliminar en rojo */
-/* ------------------------------ */
 .event button.delete-btn {
   background: red;
-  color:  #000;
+  color: #000;
   border: none;
   padding: 3px 6px;
   border-radius: 6px;

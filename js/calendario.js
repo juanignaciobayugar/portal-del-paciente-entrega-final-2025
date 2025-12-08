@@ -4,7 +4,7 @@ let currentDate = new Date();
 // Obtener eventos guardados en localStorage o iniciar objeto vacío
 let events = JSON.parse(localStorage.getItem("calendarEvents")) || {};
 
-// Elementos del DOM para mostrar mes/año y los días
+// Elementos del DOM
 const monthYear = document.getElementById("monthYear");
 const daysContainer = document.getElementById("days");
 
@@ -31,20 +31,20 @@ function loadCalendar() {
   const firstDay = new Date(year, month, 1).getDay();
   const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-  // Ajuste: semana comenzando en domingo
   let start = firstDay;
   daysContainer.innerHTML = "";
 
   let today = new Date();
 
-  // Bloques vacíos antes del inicio del mes
+  // Espacios vacíos antes del mes
   for (let i = 0; i < start; i++) {
     daysContainer.innerHTML += `<div></div>`;
   }
 
-  // Crear días del mes
+  // Crear los días del mes
   for (let day = 1; day <= daysInMonth; day++) {
     const dateKey = `${year}-${month + 1}-${day}`;
+
     let isToday =
       day === today.getDate() &&
       month === today.getMonth() &&
@@ -53,7 +53,7 @@ function loadCalendar() {
     let html = `<div class="day ${isToday ? "today" : ""}" onclick="addEvent('${dateKey}')">
                   <strong>${day}</strong>`;
 
-    // Mostrar eventos guardados
+    // Mostrar eventos
     if (events[dateKey]) {
       events[dateKey].forEach((evt, i) => {
         html += `
@@ -61,14 +61,15 @@ function loadCalendar() {
             <div>${evt.text}</div>
             <div>${evt.hour} hs</div>
 
+            <!-- Botón Editar -->
             <button class="edit-btn" onclick="event.stopPropagation(); editEvent('${dateKey}', ${i})">
-  Editar
-</button>
+              Editar
+            </button>
 
-<button class="delete-btn" onclick="event.stopPropagation(); deleteEvent('${dateKey}', ${i})">
-  Eliminar
-</button>
-
+            <!-- Botón Eliminar -->
+            <button class="delete-btn" onclick="event.stopPropagation(); deleteEvent('${dateKey}', ${i})">
+              Eliminar
+            </button>
           </div>
         `;
       });
@@ -79,48 +80,95 @@ function loadCalendar() {
   }
 }
 
-// Crear evento
-function addEvent(dateKey) {
-  const text = prompt("¿Qué debes hacer?");
+/* =====================================================
+   🔥 Crear evento con SweetAlert2
+   (Reemplaza prompt())
+===================================================== */
+async function addEvent(dateKey) {
+  const { value: text } = await Swal.fire({
+    title: "Nueva actividad",
+    input: "text",
+    inputLabel: "¿Qué debes hacer?",
+    showCancelButton: true,
+    confirmButtonText: "Siguiente",
+  });
+
   if (!text) return;
 
-  const hour = prompt("¿A qué hora?");
+  const { value: hour } = await Swal.fire({
+    title: "Horario",
+    input: "time",
+    inputLabel: "¿A qué hora?",
+    showCancelButton: true,
+    confirmButtonText: "Guardar",
+  });
+
   if (!hour) return;
 
   if (!events[dateKey]) events[dateKey] = [];
   events[dateKey].push({ text, hour });
 
   saveEvents();
+
+  Swal.fire("Guardado", "El evento fue añadido", "success");
 }
 
-// Editar evento 
-function editEvent(dateKey, index) {
+/* =====================================================
+   🔥 Editar evento con SweetAlert2
+===================================================== */
+async function editEvent(dateKey, index) {
   const evt = events[dateKey][index];
 
-  // Pedimos los valores actuales como base para que el usuario los modifique
-  const newText = prompt("Modificar texto:", evt.text);
+  const { value: newText } = await Swal.fire({
+    title: "Editar actividad",
+    input: "text",
+    inputLabel: "Modificar texto",
+    inputValue: evt.text,
+    showCancelButton: true
+  });
+
   if (!newText) return;
 
-  const newHour = prompt("Modificar horario:", evt.hour);
+  const { value: newHour } = await Swal.fire({
+    title: "Editar horario",
+    input: "time",
+    inputValue: evt.hour,
+    showCancelButton: true
+  });
+
   if (!newHour) return;
 
-  // Actualizamos el evento
-  events[dateKey][index].text = newText;
-  events[dateKey][index].hour = newHour;
-
+  events[dateKey][index] = { text: newText, hour: newHour };
   saveEvents();
+
+  Swal.fire("Editado", "El evento fue actualizado", "success");
 }
 
-// Eliminar evento
+/* =====================================================
+   🔥 Eliminar evento con confirmación SweetAlert2
+===================================================== */
 function deleteEvent(dateKey, index) {
-  events[dateKey].splice(index, 1);
+  Swal.fire({
+    title: "¿Seguro quieres eliminar este evento?",
+    text: "Esto no se puede deshacer",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Eliminar",
+    cancelButtonText: "Cancelar"
+  }).then(res => {
+    if (res.isConfirmed) {
+      events[dateKey].splice(index, 1);
 
-  if (events[dateKey].length === 0) delete events[dateKey];
+      if (events[dateKey].length === 0) delete events[dateKey];
 
-  saveEvents();
+      saveEvents();
+
+      Swal.fire("Eliminado", "El evento ha sido eliminado", "success");
+    }
+  });
 }
 
-// Guardar en localStorage + recargar
+// Guardar y recargar
 function saveEvents() {
   localStorage.setItem("calendarEvents", JSON.stringify(events));
   loadCalendar();

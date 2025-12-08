@@ -1,49 +1,97 @@
-/* -------------------------------------------------
-   Sistema de suscripción de revista (simulado)
-   Guarda si el usuario está suscripto usando localStorage
-   Mejora: ahora valida correo antes de suscribir
----------------------------------------------------*/
+/* ======================================================
+   Lógica central de la revista (suscripción y protección)
+   - Usa localStorage key: "suscripto" -> "true"
+   - Diseñado para ser cargado desde /paginas/revista/*.html
+   - Muestra SweetAlert (CDN cargado en las páginas)
+====================================================== */
 
-// Validación del formulario de suscripción
-const formSuscripcion = document.getElementById("form-suscripcion");
+/* ----------------------------
+   Validar y procesar formulario (suscripcion.html)
+   Si existe el formulario, se conecta automáticamente.
+-----------------------------*/
+(function () {
+  const form = document.getElementById('form-suscripcion');
+  if (!form) return;
 
-if (formSuscripcion) {
-  formSuscripcion.addEventListener("submit", function (e) {
-    e.preventDefault(); // Evita recargar la página
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-    // Input del email
-    const emailInput = document.getElementById("email-suscripcion");
-    const email = emailInput.value.trim();
+    const emailInput = document.getElementById('email-suscripcion');
+    const email = (emailInput && emailInput.value || '').trim();
 
-    // Validación simple del email
-    if (email === "" || !email.includes("@") || !email.includes(".")) {
-      alert("Por favor, ingresá un correo válido.");
-      emailInput.focus();
-      return;
+    if (!email || !email.includes('@') || !email.includes('.')) {
+      return Swal.fire({
+        title: 'Email inválido',
+        text: 'Ingresá un correo válido, por ejemplo: tu@email.com',
+        icon: 'error'
+      });
     }
 
-    // Si todo esta bien guardamos la suscripción
-    localStorage.setItem("suscripto", "true");
-    alert("¡Gracias por suscribirte!");
+    // Guardar suscripción
+    localStorage.setItem('suscripto', 'true');
 
-    // Opcional: limpiar y volver al inicio
-    formSuscripcion.reset();
-    window.location.href = "index.html";
+    Swal.fire({
+      title: '¡Suscripción exitosa!',
+      text: 'Gracias por suscribirte. Volvemos al índice.',
+      icon: 'success',
+      confirmButtonText: 'Ir al índice'
+    }).then(() => {
+      // redirige dentro de la misma carpeta revista
+      window.location.href = 'indice.html';
+    });
   });
-}
+})();
 
-// Verificación de suscricion en páginas primium
+
+/* -----------------------------
+   verificarSuscripcion()
+   - Llamar desde articulo premium (articulo.html) al cargar la página.
+   - Si NO está suscripto, muestra SweetAlert y redirige a accesoDenegado o suscripción.
+------------------------------*/
 function verificarSuscripcion() {
-  const suscripto = localStorage.getItem("suscripto");
+  try {
+    const sus = localStorage.getItem('suscripto');
 
-  if (suscripto !== "true") {
-    window.location.href = "accesoDenegado.html";
+    if (sus !== 'true') {
+      // mostramos alerta y ofrecemos ir a suscribirse o volver
+      Swal.fire({
+        title: 'Acceso denegado',
+        text: 'Este contenido es exclusivo para usuarios suscritos. ¿Querés suscribirte?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sí, suscribirme',
+        cancelButtonText: 'Volver al índice'
+      }).then(result => {
+        if (result.isConfirmed) {
+          window.location.href = 'suscripcion.html';
+        } else {
+          window.location.href = 'indice.html';
+        }
+      });
+      return;
+    }
+    // si está suscripto, no hacemos nada (deja ver el artículo)
+  } catch (err) {
+    console.error('Error en verificarSuscripcion:', err);
+    // fallback: mandar a accesoDenegado
+    window.location.href = 'accesoDenegado.html';
   }
 }
 
-// Cerrar sesión / Anular suscripción
+
+/* -----------------------------
+   cerrar sesion()
+   - Cerrar la suscripción y vuelve al índice
+------------------------------*/
 function cerrarSesion() {
-  localStorage.removeItem("suscripto");
-  alert("Se cerró tu sesión correctamente.");
-  window.location.href = "index.html";
+  localStorage.removeItem('suscripto');
+
+  Swal.fire({
+    title: 'Cerrar sesión',
+    text: 'Tu sesión fue cerrada.',
+    icon: 'info',
+    confirmButtonText: 'Volver al índice'
+  }).then(() => {
+    window.location.href = 'indice.html';
+  });
 }
