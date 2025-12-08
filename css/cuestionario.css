@@ -1,39 +1,35 @@
 
-
-.contenido{
+.contenidoPrincipal{
+  flex-direction: row;   /* asegura que sea en fila */
   display: flex;
-  justify-content:center;
-  gap: 10px; 
-  flex-direction: column; 
+  gap: 25px;
+  justify-content: center; /* opcional: centra las tarjetas en el contenedor */
+  flex-wrap: wrap;       /* permite que bajen a otra línea si no entran */
+  margin-top: 15px;
 }
 
-
 .card {
-  width: 90%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   border: 0.5px solid #0b1a28;
   background-color: #D4DDE7;
   padding: 2%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  margin: 0 auto;   /* centra el bloque */
-  max-width: 900px;
-  min-width: 320px;
- 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2),
+  inset 0 0 15px rgba(255,255,255,0.6); /* brillo interno */
 }
 
 .contenedor {
   display: flex;
-  max-width: auto;
   gap:1rem;
 }
 
 .imagen {
   max-width: 250px;
   height: auto;
-  border-radius: 100 px;
-  margin-top: 0,5%;
+  border-radius: 100px;
+  margin-top: 0.5%;
 }
 
 .imagen img {
@@ -46,13 +42,12 @@
 display: flex;
 flex-direction: column;   /* título arriba, botones abajo */
 align-items: center;      /* centra todo horizontalmente */
-gap: 1%;                /* espacio entre h4 y botones */
+gap: 2px;      /* espacio entre h4 y botones */
 margin-top: 1%; 
 max-width: 80%;
 }
 
 .titulo {
-  flex-wrap: wrap;
   text-align:center;
   color: #1E3754;
   font-size-adjust: none;
@@ -62,9 +57,9 @@ max-width: 80%;
 }
 
 .titulo h4{
-font-size: clamp(16px, 1.7vw, 32px);
-
-  /* font-size:  2vw; */
+font-size: clamp(16px, 1.9vw, 32px);
+font-family: 'Pyidaungsu', sans-serif;
+text-shadow: 0 0 5px rgba(255,255,255,0.8);
 }
 
 .botones {
@@ -307,9 +302,10 @@ font-size: clamp(16px, 1.7vw, 32px);
   background-color: #D4DDE7;
   padding: 1%;
   margin: 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   margin: 0 auto;
   width: 95%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2),
+  inset 0 0 15px rgba(255,255,255,0.6); /* brillo interno */
 }
 
 
@@ -345,9 +341,8 @@ margin-right: 5%;
   padding: 1%;
   margin: 0;
    max-width: 95%;
+   
 }
-
-
 
 .botonesEmergentes {
   flex: 1;
@@ -365,6 +360,8 @@ margin-right: 5%;
   line-height: 1.3;   /* ayuda a que no se deforme */
   text-align: center; /* opcional, si querés centrar */
   word-wrap: break-word; /* evita desbordes en emergentes chicos */
+  font-family: 'Pyidaungsu', sans-serif;
+text-shadow: 0 0 5px rgba(255,255,255,0.8);
 }
 
 .botonesEmergentes .btnEstado {
@@ -383,7 +380,6 @@ margin-right: 5%;
   object-fit: contain; /* la imagen entra completa */
 }
 
-
 .botonesEmergentes .btn-imgd {
   flex: 1;
   width: 50px;
@@ -394,14 +390,11 @@ margin-right: 5%;
   display: inline-flex;
 }
 
-
-
 .botonesEmergentes .btn-imgd img {
   width: 100%;
   height: 100%;
   object-fit: contain; /* la imagen entra completa */
 }
-
 
 .botonesEmergentes .btnEnergia {
   flex: 1;
@@ -413,157 +406,10 @@ margin-right: 5%;
   display: inline-flex;
 }
 
-
-
 .botonesEmergentes .btnEnergia img {
   width: 100%;
   height: 100%;
   object-fit: contain; /* la imagen entra completa */
-}
-
-
-
-
-
-
-/*div que se encuentra en header, representando energia*/
-#valorEstado {
-  display: flex;        /* o block, según lo que quieras */
-  justify-content: center; /* centra horizontalmente */
-  align-items: center;     /* centra verticalmente si tiene altura fija */
-  flex-wrap: wrap;      /* si puede haber más de un botón */
-  overflow: hidden;     /* evita que se desborde */
-  width: 100%;          /* o un ancho fijo */
-   margin-top: 3px;
-}
-
-
-
-#valorEstado button {
-  width: 40px;        /* ancho fijo */
-  height: 40px;        /* alto fijo */
-}
-
-
-/*div que se encuentra en header, representando energia*/
-#valorDolor {
-  display: flex;        /* o block, según lo que quieras */
-  justify-content: center; /* centra horizontalmente */
-  align-items: center;     /* centra verticalmente si tiene altura fija */
-  flex-wrap: wrap;      /* si puede haber más de un botón */
-  overflow: hidden;     /* evita que se desborde */
-  width: 100%;          /* o un ancho fijo */
-   margin-top: 3px;
-}
-
-#valorDolor button {
-  width: 40px;        /* ancho fijo */
-  height: 40px;        /* alto fijo */
-}
-
-.midia{
-  width: 30px;
-  flex: 1;
-  flex-wrap: wrap;
-  flex-direction: column; 
-  font-size-adjust: none;
-  margin: 0;
-  color: black;
-  font-weight: 300;
-}
-
-.midia H4{
-  font-family: 'Rubik', sans-serif;
-  text-align: center;
-  font-size: clamp(5px, 1.95vw, 15px);
-
-}
-
-.Anim {
-  width: 45px;
-  flex: 1;
-  flex-wrap: wrap;
-  flex-direction: column; 
-  color: #1E3754;
-  font-size-adjust: none;
-  padding: 1%;
-  margin: 0;
-}
-
-.Anim H4{
-  font-family: 'Rubik', sans-serif;
-  text-align: center;
-  font-size: clamp(5px, 0.95vw, 15px);
-  line-height: 15px; 
-    line-height: 1;       /* evita que las tildes desplacen demasiado */
-}
-
-
-.Dolo {
-  width: 45px;
-  flex: 1;
-  flex-wrap: wrap;
-  flex-direction: column; 
-  font-size-adjust: none;
-  margin: 0;
-}
-
-.Dolo H4{
-  font-family: 'Rubik', sans-serif;
-  text-align: center;
-  font-size: clamp(5px, 0.95vw, 15px);
-  line-height: 20px; 
-}
-
-#tarjetaDinamica {
-  float: right;
-  display: flex;
-  max-width: auto;
-  width: 240px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  height: 70px;
-  background-color: #D4DDE7;
-}
-
-.Energi {
-  width: 45px;
-  flex: 1;
-  flex-wrap: wrap;
-  flex-direction: column; 
-  font-size-adjust: none;
-  margin: 0;
-
-}
-
-.Energi H4{
-  font-family: 'Rubik', sans-serif;
-  text-align: center;
-  font-size: clamp(5px, 0.95vw, 15px);
-  line-height: 20px; 
-}
-
-/*div que se encuentra en header, representando energia*/
-#valorEnergia {
-  display: flex;        /* o block, según lo que quieras */
-  justify-content: center; /* centra horizontalmente */
-  align-items: center;     /* centra verticalmente si tiene altura fija */
-  overflow: hidden;     /* evita que se desborde */
-  width: 100%;          /* o un ancho fijo */
- margin-top: 3px;
-}
-
-#valorEnergia button {
-  width: 40px;        /* ancho fijo */
-  height: 40px;        /* alto fijo */
-}
-
-#diahoy {
-  font-family: 'Rubik', sans-serif;
-  text-align: center;
-  font-size: clamp(5px, 0.7vw, 15px);
-  line-height: 20px;
-  color:darkslategray;
-
 }
 
 

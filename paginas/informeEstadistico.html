@@ -9,12 +9,22 @@
 <!-- Estilos globales -->
     <link rel="stylesheet" href="../css/styles.css" />
 
+        <!-- Estilos globales -->
+    <link rel="stylesheet" href="../css/informeEstadistico.css" />
+
+      <link rel="stylesheet" href="../css/tarjetaDinamica.css" />
+
+
+
 <!-- Rubik -->
 <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
 
 <!-- Poppins -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
+
+<!--Pyidaungsu-->
+<link href="https://mmwebfonts.comquas.com/fonts/?font=pyidaungsu" rel="stylesheet">
 
   </head>
   <body>
@@ -25,14 +35,43 @@
     <!-- Header (encabezado) / Navbar (barra de navegacion) -->
   <header>
      <img src="../src\logo\logo.png" alt="Logo de la empresa" class="logo">
-   </header>
+   
+      <div id="tarjetaDinamica">
+          <div id="miDia" class="midia">
+            <h4>Mi día</h4>
+            <h4 id="diahoy"></h4>
+              </div>
+               <div class="Anim"> 
+               <div class ="recuadroH4">
+                <h4>Ánimo</h4>
+                </div>
+               <div id="valorEstado">
+            </div>
+            </div>
+            <div class="Dolo">
+               <div class ="recuadroH4">
+             <h4>Dolor</h4>
+             </div>
+           <div id="valorDolor">
+             </div>
+          </div>
+          <div class="Energi">
+              <div class ="recuadroH4">
+           <h4>Energía</h4>
+           </div>
+          <div id="valorEnergia">
+          </div>
+        </div>
+          
+        </div>   
+   
+    </header>
     
     <nav class="menu">
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="login.html">Login</a></li>
         <li><a href="cuestionario.html">Tú Estado</a></li>
-        <li><a href="cucharadas.html">Tú Energía</a></li>
         <li><a href="calendario.html">Calendario</a></li>
         <li><a href="informeEstadistico.html">Informe Estadistico</a></li>
         <li><a href="revista/indice.html">Revista informativa</a></li>
@@ -42,10 +81,98 @@
     </nav>
 
     <main class="contenido">
+<div class="contenidoPrincipal">
+
+  <div class="card">
+          <div class="contieneInforme">
+          
+          
+          <div class="contenedor">
+ 
+            <!-- Imagen de la tarjeta -->
+            <div class="imagen">
+              <img src="../src/informe/3.png" />
+            </div>
+          <div class="contienePregunta">
+                     <div class="titulo">
+            <h4>Tu informe de nivel de dolor</h4>
+          </div>
+                <div class="textoExplicativo">
+            <h5> Tu promedio semanal de dolor general es 5<br></h5>
+          </div>
+
+</div>
+          </div>
+
+          <h4>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eos tenetur natus aliquid enim sequi facilis deleniti ea at recusandae saepe esse, vitae similique doloribus voluptatum hic sit, pariatur nisi!
+          </h4>
+
+          </div>
+          </div>
+
+
+                  <div class="card">
+          
+              <div class="contieneInforme">
+          <div class="contenedor">
+            <!-- Imagen de la tarjeta -->
+            <div class="imagen">
+              <img src="../src/informe/2.png" />
+            </div>
+          <div class="contienePregunta">
+            <div class="titulo">
+            <h4>Tu informe de estado de Ánimo</h4>
+          </div>
+                <div class="textoExplicativo">
+            <h5> Tu promedio semanal de ánimo general es BUENO<br></h5>
+          </div>
+
+</div>
+          </div>
+
+          <h4>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eos tenetur natus aliquid enim sequi facilis deleniti ea at recusandae saepe esse, vitae similique doloribus voluptatum hic sit, pariatur nisi!
+          </h4>
+
+          </div>
+          </div>
+
+                 
+          <div class="card">
+                    <div class="contieneInforme">
+          
+          
+          <div class="contenedor">
+ 
+            <!-- Imagen de la tarjeta -->
+            <div class="imagen">
+              <img src="../src/informe/1.png" />
+            </div>
+          <div class="contienePregunta">
+                     <div class="titulo">
+            <h4>Tú informe de la Energía</h4>
+          </div>
+                <div class="textoExplicativo">
+            <h5> Tu promedio semanal general de Energía es 7<br></h5>
+          </div>
+
+</div>
+          </div>
+
+          <h4>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eos tenetur natus aliquid enim sequi facilis deleniti ea at recusandae saepe esse, vitae similique doloribus voluptatum hic sit, pariatur nisi!
+          </h4>
+
+          </div>
+          </div>
+
+                
+
+</div>
+
 
   </main>
-
-
 <!-- Footer -->
 <footer>
   <p>&copy; Sanamente 2025 <img src="../src\logo\logo footer.png" alt="Logo de la empresa" class="logo-footer"></p>
@@ -59,6 +186,9 @@
 
 <!-- Scripts -->
 <script src="../js/app.js"></script>
+<script src="../js/informe.js"></script>
+
+
 
 </body>
 

@@ -14,13 +14,18 @@ body {
 /* Layout central */
 .layout {
   display: grid;
-min-height: 100vh; /* los socalos ocupan todo el alto */
-grid-template-columns: 1fr minmax(0, 1340px) 1fr; /* zócalo - central - zócalo */
+  grid-template-columns: 100px minmax(0, 1320px) 100px;
 }
+
+.socalo {
+  background: #EAEAEA;
+ }
+
 /* Columna central */
 .central {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
+    max-width: 1340px;   /* límite fijo */
 }
 
 /* Header */
@@ -32,15 +37,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between; /* logo a la izquierda, tarjeta a la derecha */
+  height: 90px; /* altura fija del header */
 }
-
 
 .logo-footer{
   width: 40%;        /* ocupa aprox. entre 9% y 15% del header */
   max-width: 35px;/* límite para pantallas grandes */
   height: auto;      /* mantiene proporción */
   margin-left: 5px; /* espacio de 10px desde el borde izquierdo */
-
+  
 }
 
 .logo {
@@ -48,20 +53,14 @@ header {
   max-width: 300px;/* límite para pantallas grandes */
   height: auto;      /* mantiene proporción */
   margin-left: 10px; /* espacio de 10px desde el borde izquierdo */
-
+  
 }
-
-.foto-principal {
-  display: block;       /* evita espacios extra */
-  margin: 0 auto;       /* centra horizontalmente */
-  max-width: 100%;      /* se adapta al ancho del contenedor */
-  height: auto;         /* mantiene proporción */
-  object-fit: cover;    /* recorta si sobra espacio */
-}
-
 /* Menu */
 .menu {
   background: #4D8991;
+  width: 100%;          /* ocupa todo el ancho disponible */
+  max-width: 1340px;    /* nunca se pasa de este límite */
+  margin: 0 auto;       /* centrado */
 }
 
 .menu ul {
@@ -77,7 +76,7 @@ header {
 }
 
 .menu li {
-    flex: 0 0 auto; 
+  flex: 0 0 auto; 
 }
 
 .menu a {
@@ -99,15 +98,53 @@ header {
 }
 
 
-.socalo {
-  background: #EAEAEA;
- }
-
 .contenido {
   background: white;
   border-radius: 5px;
-  padding: 20px;
+  max-width: 1340px;   /* límite máximo */
+  width: 100%;         /* ocupa todo hasta ese límite */
+  margin: 0 auto;      /* asegura que quede centrado */
+  flex: 1;             /* ocupa el espacio disponible dentro de .central */
 }
+
+.foto-principal {
+  display: block;       /* evita espacios extra */
+  margin: 0 auto;       /* centra horizontalmente */
+  max-width: 100%;      /* se adapta al ancho del contenedor */
+  height: auto;         /* mantiene proporción */
+  object-fit: cover;    /* recorta si sobra espacio */
+}
+
+
+
+
+.portada {
+  display: block;       /* la convierte en bloque */
+  margin: 0;       /* márgenes automáticos la centran */
+  width: 82%;
+}
+
+/* Contenedor de la imagen + zócalos */
+.contenedor-portada {
+  display: flex;
+  align-items: center;   /* centra verticalmente la imagen respecto a los zócalos */
+  justify-content: center;
+  background:  #333; 
+}
+
+/* Zócalos laterales */
+.socaloPortada {
+  flex:1;            /* cada zócalo ocupa el 10% */
+  height: 100%;          /* mismo alto que la imagen */
+  background: #333;      /* color del zócalo */
+align-items: stretch;
+}
+
+.relieveVerdePortada {
+  height: 8px;
+  background: #1A7B91;
+}
+
 
 /* Footer */
 footer {
