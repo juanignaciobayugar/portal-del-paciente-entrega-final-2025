@@ -1,22 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artículo Premium</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Artículo Premium · Revista</title>
 
+  <!-- estilos -->
+  <link rel="stylesheet" href="../../css/styles.css">
   <link rel="stylesheet" href="../../css/revista.css">
+
+  <!-- SweetAlert2 (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- revista.js (lógica) -->
+  <script src="../../js/revista.js" defer></script>
 </head>
-<body>
+<body onload="verificarSuscripcion()">
+  <div class="layout">
+    <aside class="socalo"></aside>
 
-  <div class="container">
-    <h2>Artículo Exclusivo</h2>
-    <p>Aquí va el contenido privado solo para suscriptores </p>
+    <div class="central">
+      <header>
+        <img src="../../src/logo/logo.png" alt="Logo de la empresa" class="logo">
+      </header>
+
+      <nav class="menu">
+  <ul>
+    <li><a href="../inicio.html">Inicio</a></li>
+    <li><a href="../login.html">Login</a></li>
+    <li><a href="../tuEstado.html">Tú Estado</a></li>
+    <li><a href="../tuEnergia.html">Tú Energía</a></li>
+    <li><a href="../calendario.html">Calendario</a></li>
+    <li><a href="../informeEstadistico.html">Informe Estadístico</a></li>
+    <li><a href="indice.html">Revista informativa</a></li>
+    <li><a href="../sobreNosotros.html">Sobre Nosotros</a></li>
+    <li><a href="../contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+
+      <main class="contenido">
+        <div class="container">
+          <h2>Artículo Exclusivo</h2>
+          <p>Contenido premium disponible solo para suscriptores.</p>
+          <p style="color:#666;margin-top:12px;">
+            Si ves este contenido sin haber pasado por la suscripción, significa que la función <code>verificar Suscripcion()</code> no se ejecutó.
+          </p>
+        </div>
+      </main>
+
+  <footer>
+        <p>&copy; Sanamente 2025 <img src="../../src/logo/logo footer.png" alt="Logo footer" class="logo-footer"></p>
+      </footer>
+    </div>
+    
+    <aside class="socalo"></aside>
   </div>
-
-  <!-- Protección del contenido -->
-  <script src="../../js/revista.js"></script>
-  <script>verificarSuscripcion();</script>
-
 </body>
 </html>

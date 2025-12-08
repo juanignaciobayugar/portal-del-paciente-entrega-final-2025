@@ -1,24 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revista Informativa</title>
-<link rel="stylesheet" href="../../css/revista.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home · Revista</title>
+
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/revista.css">
 </head>
 <body>
-    <h1>Revista Informativa</h1>
-    <p>Contenido mensual sobre bienestar, salud, meditaciones y más.</p>
-<button class="btn" onclick="cerrarSesion()">Cerrar Suscripción</button>
+  <div class="layout">
+    <aside class="socalo"></aside>
 
-<script src="../../js/revista.js"></script>
+    <div class="central">
+      <header>
+        <img src="../../src/logo/logo.png" alt="Logo de la empresa" class="logo">
+      </header>
 
-    <nav>
-        <a href="ediciones.html">Ver Ediciones</a> |
-        <a href="suscripcion.html">Suscribirme</a> |
-        <a href="acceso-denegado.html">Mi Revista</a>
-       
+      <nav class="menu">
+  <ul>
+    <li><a href="../inicio.html">Inicio</a></li>
+    <li><a href="../login.html">Login</a></li>
+    <li><a href="../tuEstado.html">Tú Estado</a></li>
+    <li><a href="../tuEnergia.html">Tú Energía</a></li>
+    <li><a href="../calendario.html">Calendario</a></li>
+    <li><a href="../informeEstadistico.html">Informe Estadístico</a></li>
+    <li><a href="indice.html">Revista informativa</a></li>
+    <li><a href="../sobreNosotros.html">Sobre Nosotros</a></li>
+    <li><a href="../contacto.html">Contacto</a></li>
+  </ul>
+</nav>
 
-    </nav>
+
+      <main class="contenido">
+        <div class="container center">
+          <h1>Revista Informativa</h1>
+          <p>Tu espacio mensual de bienestar y salud</p>
+
+          <div class="acciones" style="flex-direction:column;">
+            <a class="btn" href="indice.html">Ver Índice</a>
+            <a class="btn" href="suscripcion.html">Suscribirme</a>
+          </div>
+
+          <button class="btn secondary" style="margin-top:12px;" onclick="cerrarSesion()">Cerrar Sesión</button>
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; Sanamente 2025 <img src="../../src/logo/logo footer.png" alt="Logo footer" class="logo-footer"></p>
+      </footer>
+    </div>
+
+    <aside class="socalo"></aside>
+  </div>
+
+  <!-- revista.js -->
+  <script src="../../js/revista.js"></script>
 </body>
 </html>

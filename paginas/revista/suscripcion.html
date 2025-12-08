@@ -1,41 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Suscripción</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Suscripción · Revista</title>
 
-  <!-- Estilos generales de revista -->
+  <link rel="stylesheet" href="../../css/styles.css">
   <link rel="stylesheet" href="../../css/revista.css">
+
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-
 <body>
+  <div class="layout">
+    <aside class="socalo"></aside>
 
-  <div class="container center">
-    <h2>Suscripción Mensual</h2>
-    <p>Acceso completo a todo el contenido premium</p>
-    <p><strong>Precio: $5000 por mes</strong></p>
+    <div class="central">
+      <header>
+        <img src="../../src/logo/logo.png" alt="Logo de la empresa" class="logo">
+      </header>
 
-    <!-- FORMULARIO DE SUSCRIPCIÓN -->
-    <!-- Este formulario ahora será validado por revista.js -->
-    <form id="form-suscripcion" class="subscription-form">
+      <nav class="menu">
+  <ul>
+    <li><a href="../inicio.html">Inicio</a></li>
+    <li><a href="../login.html">Login</a></li>
+    <li><a href="../tuEstado.html">Tú Estado</a></li>
+    <li><a href="../tuEnergia.html">Tú Energía</a></li>
+    <li><a href="../calendario.html">Calendario</a></li>
+    <li><a href="../informeEstadistico.html">Informe Estadístico</a></li>
+    <li><a href="indice.html">Revista informativa</a></li>
+    <li><a href="../sobreNosotros.html">Sobre Nosotros</a></li>
+    <li><a href="../contacto.html">Contacto</a></li>
+  </ul>
+</nav>
 
-      <label for="email-suscripcion">Correo electrónico:</label>
-      <input type="email"
-             id="email-suscripcion"
-             placeholder="tuemail@ejemplo.com"
-             required>
 
-      <button type="submit" class="btn">
-        Suscribirme Ahora
-      </button>
+      <main class="contenido">
+        <div class="container center">
+          <h1>Suscripción Mensual</h1>
+          <p>Acceso completo a todo el contenido premium.</p>
+          <p><strong>Precio: $5000 ARS / mes</strong></p>
 
-    </form>
+          <!-- Formulario simple -->
+          <form id="form-suscripcion" style="margin-top:12px;">
+            <label for="email-suscripcion" style="display:block;text-align:left;margin-bottom:6px;">Correo electrónico:</label>
+            <input id="email-suscripcion" type="email" placeholder="tuemail@ejemplo.com" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #ddd;margin-bottom:12px;" />
+            <button type="submit" class="btn">Suscribirme Ahora</button>
+          </form>
 
+          
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; Sanamente 2025 <img src="../../src/logo/logo footer.png" alt="Logo footer" class="logo-footer"></p>
+      </footer>
+    </div>
+
+    <aside class="socalo"></aside>
   </div>
 
-  <!-- Archivo JavaScript -->
+  <!-- revista.js -->
   <script src="../../js/revista.js"></script>
-
 </body>
 </html>

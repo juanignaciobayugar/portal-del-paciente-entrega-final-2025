@@ -1,20 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acceso Denegado</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Acceso Denegado · Revista</title>
 
+  <!-- estilos -->
+  <link rel="stylesheet" href="../../css/styles.css">
   <link rel="stylesheet" href="../../css/revista.css">
 </head>
 <body>
+  <div class="layout">
+    <aside class="socalo"></aside>
 
-  <div class="container center">
-    <h1>⛔ Acceso Denegado</h1>
-    <p>Este contenido es exclusivo para suscriptores.</p>
+    <div class="central">
+      <!-- Header (igual que index general) -->
+      <header>
+        <img src="../../src/logo/logo.png" alt="Logo de la empresa" class="logo">
+      </header>
 
-    <a class="btn" href="suscripcion.html">Suscribirme</a>
+      <!-- Nav (igual que index general, rutas adaptadas desde /paginas/revista/) -->
+      <nav class="menu">
+  <ul>
+    <li><a href="../inicio.html">Inicio</a></li>
+    <li><a href="../login.html">Login</a></li>
+    <li><a href="../tuEstado.html">Tú Estado</a></li>
+    <li><a href="../tuEnergia.html">Tú Energía</a></li>
+    <li><a href="../calendario.html">Calendario</a></li>
+    <li><a href="../informeEstadistico.html">Informe Estadístico</a></li>
+    <li><a href="indice.html">Revista informativa</a></li>
+    <li><a href="../sobreNosotros.html">Sobre Nosotros</a></li>
+    <li><a href="../contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+      <!-- Contenido -->
+      <main class="contenido">
+        <div class="container center">
+          <h1>⛔ Acceso Denegado</h1>
+          <p>Este contenido es exclusivo para usuarios suscritos.</p>
+
+          <!-- En la misma carpeta revista -->
+          <a class="btn" href="suscripcion.html">Suscribirme</a>
+          <a class="btn secondary" href="indice.html">Volver al Índice</a>
+        </div>
+      </main>
+
+      <!-- Footer (igual que index general) -->
+      <footer>
+        <p>&copy; Sanamente 2025 <img src="../../src/logo/logo footer.png" alt="Logo footer" class="logo-footer"></p>
+      </footer>
+    </div>
+
+    <aside class="socalo"></aside>
   </div>
-
 </body>
 </html>
