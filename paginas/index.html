@@ -7,7 +7,6 @@
     
 <!-- Estilos globales -->
     <link rel="stylesheet" href="../css/styles.css" />
-
     <!-- Estilos globales -->
     <link rel="stylesheet" href="../css/paginaprincipal.css" />
 
@@ -16,6 +15,10 @@
 
 <!-- Poppins -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+
+<!--Pyidaungsu-->
+<link href="https://mmwebfonts.comquas.com/fonts/?font=pyidaungsu" rel="stylesheet">
 
 
   </head>
@@ -34,7 +37,6 @@
         <li><a href="index.html">Inicio</a></li>
         <li><a href="login.html">Login</a></li>
         <li><a href="cuestionario.html">Tú Estado</a></li>
-        <li><a href="cucharadas.html">Tú Energía</a></li>
         <li><a href="calendario.html">Calendario</a></li>
         <li><a href="informeEstadistico.html">Informe Estadistico</a></li>
         <li><a href="revista/indice.html">Revista informativa</a></li>
@@ -44,25 +46,35 @@
     </nav>
 
     <main class="contenido">
-       <img src="../src\logo\foto portada.png" alt="Imagen principal" class="foto-principal">
+
+      <div class="contenedor-portadaRelieve">
+<div class="contenedor-portada">
+    <!-- Zócalo izquierdo -->
+    <div class="socaloPortada"></div>
+
+       <img class="portada"  src="../src\logo\foto portada.png" alt="Imagen principal" class="foto-principal">
  
-
-      <!-- Sección principal -->
-      <main class="contenido">
-
+    <!-- Zócalo derecho -->
+    <div class="socaloPortada"></div>
+    </div>
+    <div class="relieveVerdePortada">
+    </div>
+</div>
 <div class="contenidoPrincipal">
-
         <div class="card">
           
           
           <div class="contenedor">
             <!-- Imagen de la tarjeta -->
             <div class="imagen">
-              <img src="../src/tarjetaAnimo/Sin título-1.png" />
+              <img src="../src/indexTarj/almanaque.png" />
             </div>
           <div class="contienePregunta">
-            <div class="titulo">
-            <h4>Mí estado de ánimo hoy está:</h4>
+                     <div class="titulo">
+            <h4>Calendario Dinámico</h4>
+          </div>
+                <div class="textoExplicativo">
+            <h5> Administra tus actividades y mirá tus registros.<br>De forma facil y sencilla anota todo lo que necesites. </h5>
           </div>
 
           </div>
@@ -75,11 +87,55 @@
           <div class="contenedor">
             <!-- Imagen de la tarjeta -->
             <div class="imagen">
-              <img src="../src/tarjetaAnimo/Sin título-1.png" />
+              <img src="../src/indexTarj/energia.png" />
             </div>
           <div class="contienePregunta">
             <div class="titulo">
-            <h4>Mí estado de ánimo hoy está:</h4>
+            <h4>Mejora Tú Energía</h4>
+          </div>
+                <div class="textoExplicativo">
+            <h5> Medí tus cucharadas de energía diaria con informes semanales y mensuales.</h5>
+          </div>
+          </div>
+          </div>
+          </div>
+                  <div class="card">
+          
+          
+          <div class="contenedor">
+            <!-- Imagen de la tarjeta -->
+            <div class="imagen">
+              <img src="../src/indexTarj/revista.png" />
+            </div>
+          <div class="contienePregunta">
+                     <div class="titulo">
+            <h4>Revista Informativa</h4>
+          </div>
+                <div class="textoExplicativo">
+            <h5> Enterate de novedades, temas de salud general, dietas y meditaciones: Te ayudamos a mejorar tus habitos.</h5>
+          </div>
+
+
+          </div>
+          </div>
+          </div>
+
+                  <div class="card">
+          
+          
+          <div class="contenedor">
+            <!-- Imagen de la tarjeta -->
+            <div class="imagen">
+              <img src="../src/indexTarj/contacto.png" />
+            </div>
+          <div class="contienePregunta">
+                     <div class="titulo">
+            <h4>Contactanos</h4>
+          </div>
+                <div class="textoExplicativo">
+            <h5> Dejanos tu opinion, y tu satisfaccion con el foro.<br>
+              Siempre nos da gusto escucharte.
+            </h5>
           </div>
 
           </div>
@@ -92,45 +148,15 @@
           <div class="contenedor">
             <!-- Imagen de la tarjeta -->
             <div class="imagen">
-              <img src="../src/tarjetaAnimo/Sin título-1.png" />
+              <img src="../src/indexTarj/dolor.png" />
             </div>
           <div class="contienePregunta">
-            <div class="titulo">
-            <h4>Mí estado de ánimo hoy está:</h4>
+                      <div class="titulo">
+            <h4>Tú dolor</h4>
           </div>
-
-          </div>
-          </div>
-          </div>
-
-                  <div class="card">
-          
-          
-          <div class="contenedor">
-            <!-- Imagen de la tarjeta -->
-            <div class="imagen">
-              <img src="../src/tarjetaAnimo/Sin título-1.png" />
-            </div>
-          <div class="contienePregunta">
-            <div class="titulo">
-            <h4>Mí estado de ánimo hoy está:</h4>
-          </div>
-
-          </div>
-          </div>
-          </div>
-
-                  <div class="card">
-          
-          
-          <div class="contenedor">
-            <!-- Imagen de la tarjeta -->
-            <div class="imagen">
-              <img src="../src/tarjetaAnimo/Sin título-1.png" />
-            </div>
-          <div class="contienePregunta">
-            <div class="titulo">
-            <h4>Mí estado de ánimo hoy está:</h4>
+                <div class="textoExplicativo">
+            <h5> Podes registrar tu dolor y tu estado de ánimo general.<br> Recibi tu informe claro para llevarle a tu médico especialista.
+            </h5>
           </div>
 
           </div>
@@ -139,7 +165,7 @@
 
 
 </div>
-
+</main>
 <!-- Footer -->
 <footer>
   <p>&copy; Sanamente 2025 <img src="../src\logo\logo footer.png" alt="Logo de la empresa" class="logo-footer"></p>

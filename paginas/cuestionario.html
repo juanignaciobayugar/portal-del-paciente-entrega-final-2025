@@ -1,15 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Proyecto Web</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Proyecto Web</title>
 
   <!-- Estilos globales -->
-  <link rel="stylesheet" href="../css/cuestionario.css" />
+
   <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/cuestionario.css" />
+  <link rel="stylesheet" href="../css/tarjetaDinamica.css" />
+
 
   <!-- Rubik -->
   <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
@@ -17,17 +18,21 @@
   <!-- Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
+<!--Pyidaungsu-->
+<link href="https://mmwebfonts.comquas.com/fonts/?font=pyidaungsu" rel="stylesheet">
+
 </head>
 
 <body>
-  <div class="layout">
-    <aside class="socalo"></aside>
-    <div class="central">
+    <div class="layout">
+      <aside class="socalo"></aside>
+      <div class="central">
 
-      <!-- Header (encabezado) / Navbar (barra de navegacion) -->
-      <header>
-        <img src="../src\logo\logo.png" alt="Logo de la empresa" class="logo">
-                <div id="tarjetaDinamica">
+    <!-- Header (encabezado) / Navbar (barra de navegacion) -->
+  <header>
+     <img src="../src\logo\logo.png" alt="Logo de la empresa" class="logo">
+   
+               <div id="tarjetaDinamica">
           <div id="miDia" class="midia">
             <h4>Mi día</h4>
             <h4 id="diahoy"></h4>
@@ -54,25 +59,25 @@
           </div>
         </div>
           
-        </div>
-      </header>
-
-      <nav class="menu">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="cuestionario.html">Tú Estado</a></li>
-          <li><a href="cucharadas.html">Tú Energía</a></li>
-          <li><a href="calendario.html">Calendario</a></li>
-          <li><a href="informeEstadistico.html">Informe Estadistico</a></li>
-          <li><a href="revista/indice.html">Revista informativa</a></li>
-          <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-
-      <!-- Sección principal -->
+        </div>   
+   
+    </header>
+    
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="cuestionario.html">Tú Estado</a></li>
+        <li><a href="calendario.html">Calendario</a></li>
+        <li><a href="informeEstadistico.html">Informe Estadistico</a></li>
+        <li><a href="revista/indice.html">Revista informativa</a></li>
+        <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
       <main class="contenido">
+
+  <div class="contenidoPrincipal">
         <div class="card">
           
           
@@ -634,6 +639,8 @@
  </div>
    </div>
 </div>
+
+</div>
         </main>
         
 <!-- Footer -->
@@ -648,11 +655,11 @@
 </div>
 
 
-</body>
-
-
 <!-- Scripts -->
 <script src="../js/app.js"></script>
 <script src="../js/cuestionario.js"></script>
+
+</body>
+
 
 </html>

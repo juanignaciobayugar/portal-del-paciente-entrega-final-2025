@@ -1,14 +1,15 @@
 
-  
-  
-  
   // Fecha actual en formato legible
-  let fechaDeHoy = new Date().toLocaleDateString("es-ES", {
+ let fechaDeHoy = new Date().toLocaleDateString("es-ES", {
     month: "long",
     day: "numeric"
   });
   const diaHoy = document.getElementById("diahoy");
 diaHoy.textContent = fechaDeHoy;
+
+
+
+
 // Variable global para guardar el último número
 let ultimoEstado = null;
 /*me trae elementos del html ENGLOBA EL DOM PARA DEJAR QUE SE CARGUE PRIMERO*/
